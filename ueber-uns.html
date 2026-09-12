@@ -16,8 +16,9 @@
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="assets/css/foundation.css" rel="stylesheet"/>
 <link href="assets/css/refinement.css?v=9" rel="stylesheet"/><link href="assets/css/finish.css?v=10" rel="stylesheet"/><link href="assets/css/atelier-v7.css?v=7" rel="stylesheet"/><link href="assets/css/services.css?v=2" rel="stylesheet"/><link href="assets/css/fonts.css" rel="stylesheet"/>
-<link href="assets/css/consent.css?v=1" rel="stylesheet"/>
-<script defer src="assets/js/consent.js?v=1"></script>
+<link href="assets/css/consent.css?v=2" rel="stylesheet"/>
+<script defer src="assets/js/consent.js?v=2"></script>
+<link rel="stylesheet" href="assets/css/launch.css?v=1">
 <link href="https://www.greenfield-digital.de/ueber-uns.html" rel="canonical"/>
 </head>
 <body class="refined page-ueber-uns" data-edition="atelier-7"><a class="refined-skip" href="#main-content">Zum Inhalt</a>
@@ -33,9 +34,9 @@
 <li class="has-drop">
 <button type="button" class="services-trigger" aria-expanded="false" aria-controls="servicesMenu">Leistungen<svg aria-hidden="true" class="caret" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="m6 9 6 6 6-6"></path></svg>
 </button>
-<ul class="drop services-menu" id="servicesMenu"><li><a href="social-media.html"><span>Social Media Marketing</span><small>Der Grüne Platzhirsch</small></a></li>
-<li><a href="recruiting.html"><span>Recruiting</span><small>Die richtigen Menschen gewinnen</small></a></li>
-<li><a href="neukundengewinnung.html"><span>Neukunden<wbr>gewinnung</span><small>Passende Anfragen erhalten</small></a></li>
+<ul class="drop services-menu" id="servicesMenu"><li><a href="social-media.html"><span>Social Media Marketing</span><small>Werde zum Platzhirsch.</small></a></li>
+<li><a href="recruiting.html"><span>Mitarbeiter gewinnen</span><small>Die richtigen Menschen gewinnen</small></a></li>
+<li><a href="neukundengewinnung.html"><span>Neukunden gewinnen</span><small>Passende Anfragen erhalten</small></a></li>
 <li><a href="websites.html"><span>Websites &amp; Landing Pages</span><small>Aus Besuchern werden Anfragen</small></a></li>
 <li><a href="branding.html"><span>Branding &amp; Design</span><small>Ein Auftritt, der hängen bleibt</small></a></li>
 <li><a href="strategie.html"><span>Strategie &amp; Beratung</span><small>Mit einem klaren Plan wachsen</small></a></li>
@@ -103,7 +104,7 @@
 <section class="section section--tint" id="kontakt">
 <div class="container">
 <div class="contact-split">
-<div class="reveal">
+<div class="reveal contact-intro">
 <div class="section-head">
 <span class="pill">Jetzt kennenlernen</span>
 <h2>Lass uns ins Gespräch kommen</h2>
@@ -123,7 +124,7 @@
 </div>
 <div class="contact-next"><h3>Das erwartet dich im Erstgespräch</h3><ol><li><div><b>Deinen Betrieb verstehen.</b>Wo stehst du heute – und was möchtest du verändern?</div></li><li><div><b>Die richtigen Hebel finden.</b>Wir betrachten Marke, Mitarbeiter und Neukunden gemeinsam.</div></li><li><div><b>Einen klaren nächsten Schritt festlegen.</b>Du erfährst, welche Maßnahmen zu deinem Betrieb passen.</div></li></ol><div class="contact-direct"><a href="tel:+4922195018825">+49 (0) 221 95 01 88 25</a><a href="mailto:hello@greenfield-digital.de">E-Mail schreiben ↗</a></div></div></div>
 <div class="contact-card card reveal" style="--d:.12s">
-<form data-endpoint="https://hook.eu1.make.com/dpi3yxzn8knq3wimr36vg9hg64oz5l7h" novalidate="">
+<form class="inquiry-compact" data-endpoint="https://hook.eu1.make.com/dpi3yxzn8knq3wimr36vg9hg64oz5l7h" novalidate="">
 <div class="form-grid">
 <div class="field">
 <label for="ue-name">Name *</label>
@@ -137,21 +138,21 @@
 <label for="ue-email">E-Mail *</label>
 <input autocomplete="email" id="ue-email" name="email" placeholder="max@mustermann.de" required="" type="email"/>
 </div>
-<div class="field">
-<label for="ue-telefon">Telefon</label>
-<input autocomplete="tel" id="ue-telefon" name="telefon" placeholder="+49 123 456789" type="tel"/>
-</div>
-<div class="field full">
-<label for="ue-nachricht">Deine Nachricht (optional)</label>
-<textarea id="ue-nachricht" name="nachricht" placeholder="Erzähl uns mehr über dein Projekt..." rows="3"></textarea>
-</div>
+
+
 <div aria-hidden="true" class="hp-field">
 <label for="ue-website">Website</label>
 <input autocomplete="off" id="ue-website" name="website" tabindex="-1" type="text"/>
 </div>
-<div class="full">
+<details class="inquiry-options"><summary>Worum geht es? · Optional</summary><div class="inquiry-options-grid"><div class="field">
+<label for="ue-telefon">Telefon</label>
+<input autocomplete="tel" id="ue-telefon" name="telefon" placeholder="+49 123 456789" type="tel"/>
+</div><div class="field full">
+<label for="ue-nachricht">Deine Nachricht (optional)</label>
+<textarea id="ue-nachricht" name="nachricht" placeholder="Erzähl uns mehr über dein Projekt..." rows="3"></textarea>
+</div></div></details><div class="full">
 <button class="btn btn--primary btn--lg" style="width:100%;" type="submit">Kostenlose Beratung anfragen</button>
-<p class="form-note">Deine Daten werden vertraulich behandelt und nicht an Dritte weitergegeben</p>
+<p class="form-note">Wir bearbeiten deine Anfrage vertraulich. <a href="datenschutz.html#kontakt-daten">So verwenden wir deine Daten.</a></p>
 </div>
 </div>
 </form>
@@ -230,5 +231,5 @@
 </div>
 <button aria-pressed="false" class="a-motion" type="button">Animationen pausieren Ⅱ</button></footer>
 <script defer="" src="assets/js/main.js"></script>
-<script defer="True" src="assets/js/atelier.js?v=3"></script><script defer="True" src="assets/js/refinement.js?v=2"></script><dialog aria-labelledby="video-title" class="a-video-dialog"><div class="a-dialog-top"><h2 id="video-title">Kundenfilm</h2><button aria-label="Video schließen" class="a-dialog-close" type="button">✕</button></div><div class="a-player"></div><p>Original-Kundeninterview auf Vimeo. <a class="a-video-external" href="https://vimeo.com" rel="noopener noreferrer" target="_blank">Video direkt auf Vimeo öffnen ↗</a></p></dialog><script defer="" src="assets/js/finish.js?v=7"></script><script defer="" src="assets/js/company.js?v=7"></script><script defer src="assets/js/services.js?v=2"></script></body>
+<script defer="True" src="assets/js/atelier.js?v=3"></script><script defer="True" src="assets/js/refinement.js?v=2"></script><dialog aria-labelledby="video-title" class="a-video-dialog"><div class="a-dialog-top"><h2 id="video-title">Kundenfilm</h2><button aria-label="Video schließen" class="a-dialog-close" type="button">✕</button></div><div class="a-player"></div><p>Original-Kundeninterview auf Vimeo. <a class="a-video-external" href="https://vimeo.com" rel="noopener noreferrer" target="_blank">Video direkt auf Vimeo öffnen ↗</a></p></dialog><script defer="" src="assets/js/finish.js?v=7"></script><script defer="" src="assets/js/company.js?v=7"></script><script defer src="assets/js/services.js?v=2"></script><script defer src="assets/js/launch.js?v=1"></script></body>
 </html>

@@ -39,3 +39,6 @@ label.gf-consent-category-title{cursor:pointer}
 .a-player:has(.gf-vimeo-notice){aspect-ratio:auto;min-height:340px}
 body.gf-consent-visible .a-mobile-cta{visibility:hidden}
 @media(max-width:540px){.gf-consent{right:12px;bottom:max(12px,env(safe-area-inset-bottom));width:calc(100% - 24px);max-height:calc(100dvh - 24px);padding:20px;border-radius:20px}.gf-consent h2{font-size:19px}.gf-consent p{font-size:13px;margin-bottom:14px}.gf-consent-heading{gap:10px}.gf-consent-links{font-size:11px}.gf-consent-settings{padding:20px}.gf-consent-category{padding:14px}.gf-consent-category-title{font-size:14px}.gf-consent-actions button{font-size:13px;padding:10px 8px}.a-player:has(.gf-vimeo-notice){min-height:0}.gf-vimeo-notice{padding:24px 18px}}
+
+.gf-settings-actions{position:sticky;bottom:-28px;background:var(--white);padding:14px 0 8px;box-shadow:0 -12px 16px var(--white);z-index:1}
+@media(max-width:540px){.gf-settings-actions{bottom:-20px}.gf-consent-settings .gf-consent-note{font-size:12px;line-height:1.5}}
