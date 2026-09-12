@@ -25,8 +25,12 @@
   const photo=stage.querySelector('[data-challenge-photo]');photo.src=view.photo;photo.alt=view.alt;
  }));
  const films=[...document.querySelectorAll('.employer-film')];
+ const filmDialog=document.querySelector('.reel-dialog');
+ filmDialog?.addEventListener('close',()=>filmDialog.classList.remove('is-landscape'));
+
  films.forEach(film=>{
   const activate=()=>films.forEach(f=>f.classList.toggle('is-active',f===film));
   film.addEventListener('pointerenter',activate);film.addEventListener('focusin',activate);
+  film.querySelector('[data-reel]')?.addEventListener('click',()=>filmDialog?.classList.add('is-landscape'));
  });
 })();
