@@ -1,0 +1,56 @@
+/* One compact inquiry across all business pages. */
+.refined .inquiry-form{display:grid;gap:16px;min-width:0;}
+.refined .inquiry-form[hidden]{display:none;}
+.inquiry-heading{display:flex;flex-direction:column;gap:3px;}
+.inquiry-heading strong{font-size:1.13rem;line-height:1.35;color:var(--ink);}
+.inquiry-heading>span{font-size:.8rem;color:var(--green-700);}
+.inquiry-goals{border:0;min-width:0;padding:0;margin:0;}
+.inquiry-goals legend{padding:0;font-weight:600;font-size:.95rem;}
+.inquiry-goals>p{margin:3px 0 10px;font-size:.79rem;line-height:1.4;color:var(--muted);}
+.inquiry-goal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;}
+.inquiry-choice{display:flex;position:relative;min-width:0;}
+.inquiry-choice input{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;margin:0;accent-color:var(--green-700);cursor:pointer;}
+.inquiry-choice span{display:flex;align-items:center;width:100%;min-height:44px;padding:9px 9px 9px 38px;border:1px solid var(--line);border-radius:10px;font-size:.84rem;line-height:1.25;cursor:pointer;color:var(--ink);background:var(--white);transition:background .2s,border-color .2s;}
+.inquiry-choice input:checked+span{background:var(--mint);border-color:var(--green-700);}
+.inquiry-choice input:focus-visible+span{outline:3px solid var(--green);outline-offset:2px;}
+.inquiry-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.refined .inquiry-form .field{min-width:0;}
+.refined .inquiry-form .inquiry-fields>.field{grid-column:auto;}
+.refined .inquiry-form .field label{font-size:.82rem;margin-bottom:5px;}
+.refined .inquiry-form .field input{width:100%;min-width:0;height:46px;min-height:46px;padding:10px 12px;font-size:16px;}
+.inquiry-message{border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0;}
+.inquiry-message summary{display:flex;justify-content:space-between;gap:10px;align-items:center;list-style:none;padding:12px 0;min-height:44px;cursor:pointer;font-size:.85rem;font-weight:600;color:var(--green-700);}
+.inquiry-message summary::-webkit-details-marker{display:none;}
+.inquiry-message summary span{font-size:.75rem;font-weight:400;}
+.inquiry-message summary span:after{content:' +';font-weight:700;}
+.inquiry-message[open] summary span:after{content:' −';}
+.inquiry-message summary:focus-visible{outline:3px solid var(--green);outline-offset:2px;}
+.refined .inquiry-message textarea{min-height:84px;max-height:180px;width:100%;font-size:16px;margin:0 0 12px;}
+.refined .inquiry-form .inquiry-submit{width:100%;min-height:48px;font-size:.95rem;padding:12px;}
+.refined .inquiry-form .form-note{margin:0;font-size:.73rem;line-height:1.45;}
+.refined .contact-card:has(.inquiry-form){padding:28px;scroll-margin-top:90px;}
+.inquiry-form .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+@media(max-width:820px){
+ .refined #kontakt:has(.inquiry-form){padding-top:12px;scroll-margin-top:0;}
+ .refined #kontakt .contact-card:has(.inquiry-form){order:0;padding:18px;}
+ .refined #kontakt:has(.inquiry-form) .contact-intro>.section-head{order:1;margin-top:14px;}
+ .refined .inquiry-form{gap:11px;}
+ .inquiry-heading strong{font-size:1rem;}
+ .inquiry-heading>span{font-size:.75rem;}
+ .inquiry-goals legend{font-size:.875rem;}
+ .inquiry-goals>p{margin-bottom:8px;}
+ .inquiry-fields{gap:9px 10px;}
+ .refined .inquiry-form .field label{font-size:.75rem;}
+ .refined .inquiry-form .field input{height:44px;min-height:44px;padding:9px;}
+ .inquiry-choice span{font-size:.78rem;padding:6px 7px 6px 32px;line-height:1.2;}
+ .inquiry-choice input{left:9px;width:16px;height:16px;}
+ .refined .inquiry-form .inquiry-submit{font-size:.86rem;}
+}
+@media(max-width:360px){
+ .refined #kontakt .contact-card:has(.inquiry-form){padding:12px;}
+ .refined #kontakt:has(.inquiry-form){padding-top:4px;}
+ .refined .inquiry-form{gap:8px;}
+ .inquiry-goal-grid{gap:6px;}
+ .inquiry-choice span{font-size:.73rem;}
+ .refined .inquiry-form .inquiry-submit{font-size:.79rem;}
+}

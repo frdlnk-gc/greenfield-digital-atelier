@@ -77,10 +77,16 @@
  // One consistent, recoverable submission handler for the duplicated website.
  $$('form[data-endpoint]').forEach(form=>{
   let busy=false;
+  const goals=$$('.inquiry-goals input[type="checkbox"]',form);
+  const validateGoals=()=>{
+   if(goals.length)goals[0].setCustomValidity(goals.some(input=>input.checked)?'':'Wähle mindestens ein Anliegen oder „Noch unsicher“.');
+  };
+  goals.forEach(input=>input.addEventListener('change',validateGoals));
   form.addEventListener('submit',async e=>{
    e.preventDefault();
    if(busy||$('input[name="website"]',form)?.value)return;
    $$('input[required],textarea[required]',form).forEach(el=>{el.value=el.value.trim();});
+   validateGoals();
    if(!form.reportValidity())return;
    const data={};
    new FormData(form).forEach((v,k)=>{if(k==='website')return;const value=String(v).trim();data[k]=data[k]?`${data[k]}, ${value}`:value;});
