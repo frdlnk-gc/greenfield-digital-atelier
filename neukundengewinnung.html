@@ -5,48 +5,163 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Neukundengewinnung für die grüne Branche – Greenfield Digital</title>
-<meta content="Planbar Neukunden gewinnen in Pflanzenhandel, Gartenbau und Dachbegrünung – mit Performance-Marketing und vorqualifizierten Anfragen." name="description"/>
+<meta content="Mehr passende Kunden für GaLaBau, Baumschulen und Gartencenter: Greenfield verbindet klare Angebote, echte Inhalte und gezielte Kampagnen mit einem Weg zur Anfrage." name="description"/>
 <meta content="Neukundengewinnung für die grüne Branche – Greenfield Digital" property="og:title"/>
-<meta content="Planbar Neukunden gewinnen in Pflanzenhandel, Gartenbau und Dachbegrünung – mit Performance-Marketing und vorqualifizierten Anfragen." property="og:description"/>
+<meta content="Mehr passende Kunden für GaLaBau, Baumschulen und Gartencenter: Greenfield verbindet klare Angebote, echte Inhalte und gezielte Kampagnen mit einem Weg zur Anfrage." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="#0CAE80" name="theme-color"/>
 <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="assets/img/favicon.png" rel="icon" type="image/png"/>
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="assets/css/foundation.css" rel="stylesheet"/>
-<style>
-    .tp-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
-    .tp-list { margin-bottom: 34px; }
-    .tp-list li { display: flex; gap: 18px; margin-bottom: 24px; }
-    .tp-num {
-      flex: 0 0 46px; height: 46px;
-      border-radius: 50%;
-      background: var(--mint); color: var(--green-700);
-      font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .tp-list h4 { margin-bottom: 4px; }
-    .tp-list p { font-size: .98rem; }
-    @media (max-width: 900px) {
-      .tp-grid { grid-template-columns: 1fr; gap: 30px; }
-      .phone-mock { width: min(270px, 76vw); margin-top: 6px; }
-      .phone-mock .screen { min-height: 430px; }
-      .pm-toast { right: -4px; top: 70px; font-size: .76rem; }
-    }
-    .stats-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-    @media (max-width: 1024px) { .stats-grid-4 { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .stats-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
-    .tp-check {
-      flex: 0 0 26px; height: 26px; margin-top: 4px;
-      border-radius: 50%;
-      background: var(--mint) center / 13px no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230CAE80' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
-    }
-  </style>
+<!-- Page-specific acquisition design -->
 <link href="assets/css/refinement.css?v=9" rel="stylesheet"/><link href="assets/css/finish.css?v=10" rel="stylesheet"/><link href="assets/css/services.css?v=3" rel="stylesheet"/><link href="assets/css/fonts.css" rel="stylesheet"/>
 <link href="assets/css/consent.css?v=2" rel="stylesheet"/>
 <script defer src="assets/js/consent.js?v=2"></script>
 <link rel="stylesheet" href="assets/css/launch.css?v=2">
+<style id="neukunden-design">
+/* Acquisition page: customer goals, authentic work and a clear route to conversation. */
+.growth-hero{padding:calc(var(--nav-h) + 28px) 0 28px;}
+.growth-hero-shell{background:var(--forest);border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;color:var(--white);}
+.growth-hero-copy{padding:clamp(30px,4.4vw,68px);padding-right:clamp(28px,3vw,48px);align-self:center;}
+.growth-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;line-height:1.5;color:var(--green-bright);font-weight:600;}
+.growth-eyebrow i{width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 0 5px rgba(46,207,161,.12);}
+.page-neukundengewinnung .growth-hero h1{font-size:clamp(2.8rem,4.8vw,4.8rem);line-height:1.04;letter-spacing:-.055em;margin:26px 0;color:var(--white);font-weight:650;}
+.growth-hero h1 em,.growth-partnership h2 em{font-style:normal;color:var(--green-bright);}
+.growth-hero-copy>p{font-size:1.02rem;line-height:1.8;color:rgba(255,255,255,.82);max-width:48ch;}
+.growth-actions{display:flex;flex-wrap:wrap;gap:18px 24px;align-items:center;margin-top:30px;}
+.growth-actions .btn{font-size:.85rem;padding:16px 20px;gap:12px;}
+.growth-actions svg,.growth-text-link svg,.growth-focus-copy .btn-link svg,.growth-faq svg{width:19px;height:19px;flex:none;}
+.growth-text-link{display:inline-flex;align-items:center;gap:12px;color:var(--white);font-size:.9rem;font-weight:600;text-decoration:none;}
+.growth-text-link:hover{color:var(--green-bright);}
+.growth-hero-reassurance{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:30px;font-size:.72rem;color:rgba(255,255,255,.65);}
+.growth-hero-reassurance span{display:flex;align-items:center;gap:7px;}
+.growth-hero-reassurance span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--green-bright);}
+.growth-hero-visual{padding:22px 22px 0 0;display:flex;flex-direction:column;justify-content:center;min-width:0;}
+.growth-hero-visual figure{position:relative;border-radius:20px;overflow:hidden;}
+.growth-hero-visual img{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;}
+.growth-hero-visual figcaption{padding:12px 0 0;font-size:.7rem;line-height:1.5;color:rgba(255,255,255,.58);}
+.growth-direction{padding:26px 20px 26px 0;}
+.growth-direction>span{font-size:.72rem;color:rgba(255,255,255,.6);}
+.growth-direction strong{font-size:clamp(1.3rem,1.75vw,1.8rem);font-weight:550;line-height:1.35;display:block;margin-top:6px;letter-spacing:-.025em;}
+.growth-direction a{display:inline-flex;gap:10px;align-items:center;color:var(--green-bright);font-size:.75rem;margin-top:13px;}
+.growth-direction svg{height:16px;width:16px;}
+.growth-proof-strip{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr 1.15fr;gap:22px;align-items:center;border-top:1px solid rgba(255,255,255,.14);padding:26px clamp(30px,4.4vw,68px);background:rgba(255,255,255,.025);}
+.growth-proof-strip strong{font-size:clamp(2rem,3vw,3.1rem);line-height:1.1;letter-spacing:-.05em;font-weight:600;}
+.growth-proof-strip strong span{color:var(--green-bright);}
+.growth-proof-strip div p{color:rgba(255,255,255,.7);font-size:.77rem;margin:8px 0 0;line-height:1.4;}
+.growth-proof-strip .growth-proof-context{font-size:.72rem;color:rgba(255,255,255,.6);line-height:1.7;border-left:1px solid rgba(255,255,255,.15);padding-left:26px;}
+.growth-hero .service-trust--flow{padding-top:26px;padding-bottom:0;}
+.growth-heading{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:end;margin-bottom:35px;}
+.growth-heading h2,.growth-process h2,.growth-partnership h2,.growth-faq h2{font-size:clamp(2rem,3vw,3.1rem);letter-spacing:-.045em;line-height:1.12;}
+.growth-heading h2{margin-top:18px;}
+.growth-heading>p{max-width:48ch;font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:0;}
+.growth-focus{background:var(--mint-soft);}
+.growth-focus-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 24px;}
+.growth-focus-tabs button{min-height:69px;display:flex;gap:18px;align-items:center;background:transparent;color:var(--text);padding:18px 20px;border:1px solid var(--line);border-radius:13px;font:inherit;font-size:.96rem;font-weight:600;text-align:left;cursor:pointer;transition:background .2s,color .2s;}
+.growth-focus-tabs button>span{font-size:.73rem;opacity:.65;}
+.growth-focus-tabs button>svg{width:21px;height:21px;margin-left:auto;}
+.growth-focus-tabs button[aria-selected=true]{background:var(--forest);color:var(--white);border-color:var(--forest);}
+.growth-focus-tabs button[aria-selected=true]>svg{color:var(--green-bright);}
+.growth-focus-panel{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--white);}
+.growth-focus-panel[hidden]{display:none;}
+.growth-focus-panel figure{margin:0;position:relative;display:flex;flex-direction:column;background:var(--forest);}
+.growth-focus-panel figure>img{display:block;width:100%;flex:1;min-height:0;object-fit:cover;}
+.growth-focus-panel figcaption{font-size:.7rem;line-height:1.6;padding:13px 20px;color:rgba(255,255,255,.75);}
+.growth-focus-copy{padding:clamp(26px,3.5vw,52px);}
+.growth-kicker{display:block;font-size:.69rem;letter-spacing:.09em;text-transform:uppercase;color:var(--green-700);font-weight:700;}
+.growth-focus-copy h3{font-size:clamp(1.55rem,2.2vw,2.15rem);line-height:1.2;letter-spacing:-.035em;margin:13px 0 17px;}
+.growth-focus-copy>p{font-size:.9rem;line-height:1.75;margin:0 0 24px;color:var(--text);}
+.growth-focus-copy dl{display:grid;gap:16px;margin:0 0 27px;}
+.growth-focus-copy dl>div{padding-left:17px;border-left:2px solid var(--green);}
+.growth-focus-copy dt{font-weight:650;font-size:.84rem;margin-bottom:3px;}
+.growth-focus-copy dd{margin:0;color:var(--text);font-size:.81rem;line-height:1.65;}
+.growth-focus-copy .btn-link{display:inline-flex;gap:10px;font-size:.86rem;}
+.growth-process-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:clamp(40px,8vw,120px);align-items:start;}
+.growth-process-intro{position:sticky;top:115px;}
+.growth-process h2{margin:20px 0 24px;max-width:17ch;}
+.growth-process h2 em{font-style:normal;color:var(--green-700);}
+.growth-process-intro>p{font-size:.94rem;line-height:1.8;max-width:46ch;color:var(--text);}
+.growth-process-intro figure{margin-top:30px;max-width:440px;}
+.growth-process-intro figure img{display:block;width:100%;height:auto;border-radius:18px;}
+.growth-process-intro figcaption{font-size:.71rem;line-height:1.6;color:var(--muted);margin-top:10px;}
+.growth-steps{position:relative;}
+.growth-steps::before{content:'';position:absolute;left:23px;top:20px;bottom:90px;width:1px;background:var(--line);}
+.growth-steps article{display:grid;grid-template-columns:48px 1fr;gap:22px;padding:0 0 38px;position:relative;}
+.growth-steps article:last-child{padding-bottom:0;}
+.growth-step-number{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--white);display:grid;place-items:center;color:var(--green-700);font-size:.86rem;font-weight:700;}
+.growth-steps article:first-child .growth-step-number{background:var(--forest);color:var(--green-bright);border-color:var(--forest);}
+.growth-steps .growth-kicker{margin-top:5px;}
+.growth-steps h3{font-size:1.4rem;letter-spacing:-.03em;line-height:1.25;margin:11px 0 13px;}
+.growth-steps p{font-size:.91rem;line-height:1.8;color:var(--text);}
+.growth-step-outcome{margin-top:18px;border-radius:12px;background:var(--mint-soft);padding:14px 18px;}
+.growth-step-outcome span{font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-700);display:block;margin-bottom:4px;}
+.growth-step-outcome strong{font-weight:550;font-size:.84rem;line-height:1.5;display:block;}
+.growth-work{background:var(--mint-soft);}
+.growth-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px;}
+.growth-work-grid>a{display:block;color:var(--white);background:var(--forest);overflow:hidden;border-radius:20px;}
+.growth-work-grid figure{overflow:hidden;}
+.growth-work-grid img{display:block;width:100%;aspect-ratio:1.5;object-fit:cover;transition:transform .4s;}
+.growth-work-grid>a:hover img{transform:scale(1.025);}
+.growth-work-grid>a>div{padding:23px 25px 28px;position:relative;min-height:137px;}
+.growth-work-grid span{color:var(--green-bright);font-size:.72rem;display:block;}
+.growth-work-grid strong{font-size:1.18rem;line-height:1.3;letter-spacing:-.02em;font-weight:550;display:block;margin-top:10px;padding-right:22px;}
+.growth-work-grid svg{height:22px;width:22px;position:absolute;right:22px;bottom:27px;}
+.growth-work-note{font-size:.73rem;line-height:1.6;color:var(--muted);margin-top:20px;}
+.growth-partnership{background:var(--forest);color:var(--white);}
+.growth-partnership-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,7vw,100px);align-items:center;}
+.growth-partnership .growth-kicker{color:var(--green-bright);}
+.growth-partnership h2{color:var(--white);margin:20px 0;}
+.growth-partnership-grid>div>p{color:rgba(255,255,255,.72);font-size:.97rem;line-height:1.8;max-width:48ch;}
+.growth-partnership .partner-mini{max-width:300px;margin-top:26px;}
+.growth-promises article{display:flex;gap:26px;border-bottom:1px solid rgba(255,255,255,.15);padding:25px 0;}
+.growth-promises article>span{color:var(--green-bright);font-size:.8rem;padding-top:4px;}
+.growth-promises h3{color:var(--white);font-size:1.2rem;letter-spacing:-.02em;line-height:1.3;margin-bottom:10px;}
+.growth-promises p{color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.75;margin:0;}
+.growth-promises .growth-text-link{margin-top:26px;color:var(--green-bright);}
+.growth-faq{background:var(--mint-soft);}
+.growth-faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(40px,6vw,85px);}
+.growth-faq h2{margin:20px 0;}
+.growth-faq-grid>div>p{color:var(--text);line-height:1.8;max-width:37ch;margin-bottom:24px;}
+.growth-faq .btn-link{display:inline-flex;gap:8px;align-items:center;font-size:.9rem;}
+.growth-faq details{border-bottom:1px solid var(--line);}
+.growth-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 0;font-weight:600;font-size:.97rem;line-height:1.5;}
+.growth-faq summary::-webkit-details-marker{display:none;}
+.growth-faq summary>span{font-size:1.35rem;line-height:1;font-weight:400;color:var(--green-700);transition:transform .2s;}
+.growth-faq details[open] summary>span{transform:rotate(45deg);}
+.growth-faq details>p{padding:0 30px 24px 0;font-size:.91rem;color:var(--text);line-height:1.8;}
+.page-neukundengewinnung #kontakt{background:var(--white);}
+.page-neukundengewinnung #kontakt .contact-trust>h2{letter-spacing:-.045em;}
+.page-neukundengewinnung :is(.growth-focus-tabs button,.growth-faq summary):focus-visible{outline:3px solid var(--green);outline-offset:4px;}
+@media(max-width:1100px){.growth-hero-copy{padding:35px 30px;}.growth-proof-strip{padding:24px 30px;gap:15px;}.growth-proof-strip .growth-proof-context{padding-left:18px;}.growth-actions .btn{font-size:.78rem;padding:14px;}.growth-focus-copy{padding:30px;}.growth-heading{gap:35px;}.growth-focus-tabs button{padding:17px 14px;gap:12px;}.growth-process-grid{gap:45px;}.growth-steps article{gap:16px;}.growth-work-grid{gap:16px;}.growth-work-grid>a>div{padding:20px;}}
+@media(max-width:820px){
+ .growth-hero{padding-top:calc(var(--nav-h) + 18px);}.growth-hero-shell{grid-template-columns:1fr;border-radius:22px;}.growth-hero-copy{padding:32px 27px;}.page-neukundengewinnung .growth-hero h1{font-size:clamp(2.7rem,8vw,4.1rem);margin:23px 0;}.growth-hero-copy>p{font-size:.93rem;}.growth-actions{gap:22px;margin-top:25px;}.growth-actions .btn{font-size:.85rem;padding:15px 18px;}.growth-hero-reassurance{font-size:.66rem;gap:9px 15px;margin-top:25px;}.growth-hero-visual{padding:0 18px;}.growth-hero-visual figure{border-radius:15px;}.growth-direction{padding:23px 9px 27px;}.growth-direction strong{font-size:1.45rem;}.growth-proof-strip{grid-template-columns:repeat(3,1fr);gap:18px 10px;padding:25px 26px;}.growth-proof-strip strong{font-size:clamp(1.6rem,5vw,2.6rem);}.growth-proof-strip div p{font-size:.64rem;}.growth-proof-strip .growth-proof-context{grid-column:1/-1;border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:13px 0 0;line-height:1.5;font-size:.65rem;}.growth-proof-context br{display:none;}
+ .growth-hero .service-trust--flow{grid-template-columns:1fr;gap:12px;padding-top:25px;}.growth-hero .client-intro{display:flex;align-items:center;justify-content:space-between;gap:18px;}.growth-hero .client-intro p{font-size:.77rem;}.growth-hero .client-motion{font-size:.68rem;margin:0;white-space:nowrap;}.growth-hero .client-logo{height:65px;width:125px;flex-basis:125px;}.growth-hero .client-logo img{width:115px;height:54px;}
+ .growth-heading{grid-template-columns:1fr;gap:18px;margin-bottom:27px;}.growth-heading h2,.growth-process h2,.growth-partnership h2,.growth-faq h2{font-size:clamp(1.9rem,6vw,2.8rem);}.growth-heading>p{font-size:.92rem;}.growth-focus-tabs{gap:7px;margin-bottom:17px;}.growth-focus-tabs button{min-height:72px;display:block;padding:12px 9px;font-size:.78rem;line-height:1.3;}.growth-focus-tabs button>span{display:block;font-size:.61rem;margin-bottom:7px;}.growth-focus-tabs button>svg{display:none;}.growth-focus-panel{grid-template-columns:1fr;border-radius:18px;}.growth-focus-panel figure>img{aspect-ratio:1.5;width:100%;height:auto;flex:none;}.growth-focus-panel figcaption{padding:10px 16px;font-size:.61rem;}.growth-focus-copy{padding:26px;}.growth-focus-copy h3{font-size:1.55rem;}.growth-focus-copy>p{font-size:.88rem;}.growth-focus-copy .btn-link{font-size:.8rem;}
+ .growth-process-grid{grid-template-columns:1fr;gap:35px;}.growth-process-intro{position:static;}.growth-process h2{max-width:20ch;}.growth-process-intro figure{max-width:none;}.growth-process-intro figure img{max-height:350px;object-fit:cover;}.growth-steps article{gap:16px;padding-bottom:30px;grid-template-columns:38px 1fr;}.growth-step-number{width:38px;height:38px;font-size:.73rem;}.growth-steps:before{left:18px;}.growth-steps h3{font-size:1.27rem;}.growth-steps p{font-size:.88rem;}.growth-step-outcome{padding:13px;}
+ .growth-work-grid{grid-template-columns:1fr;gap:21px;}.growth-work-grid>a>div{min-height:110px;}.growth-work-grid strong{font-size:1.25rem;}.growth-work-note{font-size:.66rem;}.growth-partnership-grid{grid-template-columns:1fr;gap:26px;}.growth-promises article{gap:19px;padding:23px 0;}.growth-partnership .partner-mini{max-width:280px;}.growth-faq-grid{grid-template-columns:1fr;gap:26px;}.growth-faq summary{font-size:.92rem;}.growth-faq details>p{font-size:.86rem;}
+}
+@media(prefers-reduced-motion:reduce){.growth-work-grid img,.growth-focus-tabs button,.growth-faq summary>span{transition:none;}}
+
+
+/* Keep the next step visible in short desktop windows and lead with the form on mobile. */
+@media(min-width:821px) and (max-height:850px){
+ .refined.page-neukundengewinnung #kontakt{padding-top:20px;}
+ .refined.page-neukundengewinnung .contact-card:has(.inquiry-form){padding:20px;}
+ .refined.page-neukundengewinnung .inquiry-form{gap:10px;}
+ .refined.page-neukundengewinnung .inquiry-heading{flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;}
+ .refined.page-neukundengewinnung .inquiry-heading strong{font-size:1rem;}
+ .refined.page-neukundengewinnung .inquiry-heading>span{font-size:.7rem;}
+ .refined.page-neukundengewinnung .inquiry-goal-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+ .refined.page-neukundengewinnung .inquiry-choice span{font-size:.73rem;padding:7px 7px 7px 32px;}
+ .refined.page-neukundengewinnung .inquiry-choice input{left:9px;}
+ .refined.page-neukundengewinnung .inquiry-fields{gap:9px 12px;}
+ .refined.page-neukundengewinnung .inquiry-form .field label{line-height:1.4;margin-bottom:4px;}
+ .refined.page-neukundengewinnung .inquiry-form .field input{height:44px;min-height:44px;}
+ .refined.page-neukundengewinnung .inquiry-message summary{padding:9px 0;}
+}
+@media(max-width:820px){.refined.page-neukundengewinnung #kontakt .contact-card:has(.inquiry-form){order:-1;}}
+</style>
 <meta property="og:image" content="https://www.greenfield-digital.de/assets/img/social/neukundengewinnung-ed212f708b.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -57,7 +172,7 @@
 <meta property="og:locale" content="de_DE"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Neukundengewinnung für die grüne Branche – Greenfield Digital"/>
-<meta name="twitter:description" content="Planbar Neukunden gewinnen in Pflanzenhandel, Gartenbau und Dachbegrünung – mit Performance-Marketing und vorqualifizierten Anfragen."/>
+<meta name="twitter:description" content="Mehr passende Kunden für GaLaBau, Baumschulen und Gartencenter: Greenfield verbindet klare Angebote, echte Inhalte und gezielte Kampagnen mit einem Weg zur Anfrage."/>
 <meta name="twitter:image" content="https://www.greenfield-digital.de/assets/img/social/neukundengewinnung-ed212f708b.png"/>
 <meta name="twitter:image:alt" content="Greenfield – Die richtigen Kunden. Für deinen Betrieb."/>
 <link rel="stylesheet" href="assets/css/inquiries.css?v=1">
@@ -98,149 +213,21 @@
 </div>
 </div>
 </header>
-<main id="main-content">
-<section class="page-hero">
-<div class="container">
-<div class="hero-card reveal in refined-photo-hero">
-<div class="hero-inner">
-<span class="pill pill--glow"><span class="dot"></span>Planbares Wachstum</span>
-<h1>Deine Qualität.<br/><span class="accent">Neue Kunden.</span></h1>
-<p class="sub">Wir bringen die richtigen Kunden zu deinem Betrieb – durch gezieltes Performance-Marketing und klare Positionierung.</p>
-<div class="hero-actions"><a class="btn btn--white is-green-text" href="#kontakt">Neukunden gewinnen</a><a class="btn btn--ghost" href="#vorgehen">Unser Vorgehen<span class="arr">→</span></a></div>
-<div class="partner-mini reveal" style="--d:.2s">
+<main id="main-content"><section class="growth-hero"><div class="container"><div class="growth-hero-shell">
+<div class="growth-hero-copy"><span class="growth-eyebrow"><i></i> Neukunden für die grüne Branche</span><h1>Mehr Aufträge.<br><em>Die richtigen.</em></h1><p>Gewinne Kunden, die deine Arbeit wertschätzen. Wir bringen deinen Betrieb ins Blickfeld der richtigen Menschen – mit einem klaren Angebot, starken Inhalten und gezielten Kampagnen.</p><div class="growth-actions"><a class="btn btn--white" href="#kontakt">Meine Neukundengewinnung stärken <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="growth-text-link" href="#vorgehen">So gehen wir vor <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div><div class="growth-hero-reassurance"><span>Für deine Region</span><span>Für deine Leistungen</span><span>Für deinen Betrieb</span></div></div>
+<div class="growth-hero-visual"><figure><img src="assets/img/live/planning-site.webp" width="1280" height="853" alt="Abstimmung auf einer Baustelle im Garten- und Landschaftsbau" fetchpriority="high"><figcaption>Echte Arbeit. Echte Menschen. Die grüne Branche.</figcaption></figure><div class="growth-direction"><span>Dein nächster Auftrag beginnt mit</span><strong>„Genau so einen Betrieb suchen wir.“</strong><a href="#wunschkunden">Deine Wunschkunden entdecken <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div>
+<div class="growth-proof-strip"><div><strong>14.400<span>+</span></strong><p>Neukundenanfragen generiert</p></div><div><strong>4.300<span>+</span></strong><p>Neukundenaufträge entstanden</p></div><div><strong>180<span>+</span></strong><p>Projekte umgesetzt</p></div><p class="growth-proof-context">Aus unserer bisherigen Arbeit<br>in der Neukundengewinnung.</p></div>
+</div><div class="service-trust service-trust--flow"><div class="client-intro"><p>Betriebe aus der grünen Branche,<br>die mit uns arbeiten.</p><button type="button" class="client-motion" aria-pressed="false">Logos pausieren <span aria-hidden="true">Ⅱ</span></button></div><div class="client-window" tabindex="0" role="region" aria-label="Auswahl von 23 Greenfield-Kunden – mit den Pfeiltasten durchsehen"><div class="client-track"><div class="client-group"><div class="client-logo"><img src="assets/img/live/logo-huben.webp" alt="Baumschule Huben" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-wisag.webp" alt="WISAG" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-gruenteam.webp" alt="Grün Team GmbH" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-streb.webp" alt="Gartencenter Streb" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-scheldmann.webp" alt="Scheidtmann" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-vivawest.webp" alt="VIVAWEST" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-woerlein.webp" alt="Baumschule Wöhrlein" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-spaeth.webp" alt="Späth’sche Baumschulen" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-kordes.webp" alt="Kordes Jungpflanzen" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-freiraum.webp" alt="Freiraum Gartenarchitektur" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-blumenmetzger.webp" alt="Blumen Metzger" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-schley.webp" alt="Schley’s Gartencenter" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-jensen.webp" alt="Jensen Landschaftsarchitekten" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-stanze.webp" alt="Stanze Gartencenter" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-lorberg.webp" alt="Lorberg" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-thielen.webp" alt="Intermarkt Thielen" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-groenfingers.webp" alt="Grönfingers" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-stadtgruen.webp" alt="Stadtgrün Potsdam" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-schulz.webp" alt="Schulz & Brammen" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-mauer.webp" alt="Mauer Gartenlandschaftsbau" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-schwingel.webp" alt="Gartengestaltung Schwingel" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-sollazzo-wetzel.png" alt="Sollazzo &amp; Wetzel" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-fu.webp" alt="Flöter &amp; Uszkureit" width="150" height="68" loading="lazy"></div></div><div class="client-group" aria-hidden="true"><div class="client-logo"><img src="assets/img/live/logo-huben.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-wisag.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-gruenteam.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-streb.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-scheldmann.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-vivawest.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-woerlein.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-spaeth.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-kordes.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-freiraum.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-blumenmetzger.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-schley.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-jensen.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-stanze.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-lorberg.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-thielen.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-groenfingers.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-stadtgruen.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-schulz.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-mauer.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-schwingel.webp" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/productions/logo-sollazzo-wetzel.png" alt="" width="150" height="68" loading="lazy"></div><div class="client-logo"><img src="assets/img/live/logo-fu.webp" alt="" width="150" height="68" loading="lazy"></div></div></div></div></div></div></section><section class="section growth-focus" id="wunschkunden"><div class="container"><div class="growth-heading"><div><span class="pill">Wachstum, das zu dir passt</span><h2>Welche Aufträge willst du<br><span class="mark-u">häufiger gewinnen?</span></h2></div><p>Du bestimmst, wohin dein Betrieb wachsen soll. Wir richten Angebot, Ansprache und Kampagnen gemeinsam darauf aus.</p></div><div class="growth-focus-tabs" role="tablist" aria-label="Schwerpunkt deiner Neukundengewinnung"><button type="button" id="tab-garten" role="tab" aria-controls="focus-garten" aria-selected="true" tabindex="0"><span>01</span>Gartenprojekte<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><button type="button" id="tab-pflege" role="tab" aria-controls="focus-pflege" aria-selected="false" tabindex="-1"><span>02</span>Laufende Pflege<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><button type="button" id="tab-pflanzen" role="tab" aria-controls="focus-pflanzen" aria-selected="false" tabindex="-1"><span>03</span>Pflanzen & Beratung<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div><div id="focus-garten" role="tabpanel" aria-labelledby="tab-garten" class="growth-focus-panel" ><figure><img src="assets/img/side-neukunden.webp" alt="Gartenanlage mit Pflanzflächen, Wegen und Sitzplätzen aus der Vogelperspektive" width="1280" height="853" loading="lazy"><figcaption>Ein möglicher Schwerpunkt für deine Neukundengewinnung</figcaption></figure><div class="growth-focus-copy"><span class="growth-kicker">Dein Angebot gibt die Richtung vor</span><h3>Gärten gestalten.<br>Mit Kunden, die Qualität suchen.</h3><p>Ob komplette Neuanlage oder anspruchsvolle Umgestaltung: Zeige genau die Projekte, von denen du mehr umsetzen möchtest.</p><dl><div><dt>Projektart & Umfang</dt><dd>Welche Arbeiten passen zu deinem Können und deiner Mannschaft?</dd></div><div><dt>Region & Zeitraum</dt><dd>Wo arbeitest du – und wann ist Platz für neue Projekte?</dd></div><div><dt>Beratung & Planung</dt><dd>Was sollten Interessenten vor dem ersten Gespräch wissen?</dd></div></dl><a class="btn-link" href="#kontakt">Über diesen Schwerpunkt sprechen <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div><div id="focus-pflege" role="tabpanel" aria-labelledby="tab-pflege" class="growth-focus-panel" hidden><figure><img src="assets/img/live/planning-site.webp" alt="Abstimmung zur Arbeit an einer Außenanlage" width="1280" height="853" loading="lazy"><figcaption>Ein möglicher Schwerpunkt für deine Neukundengewinnung</figcaption></figure><div class="growth-focus-copy"><span class="growth-kicker">Dein Angebot gibt die Richtung vor</span><h3>Außenanlagen pflegen.<br>Mit Partnerschaften, die passen.</h3><p>Richte deinen Auftritt auf Eigentümer, Unternehmen oder Verwaltungen aus, deren Flächen und Anforderungen zu deinem Betrieb passen.</p><dl><div><dt>Flächen & Leistungen</dt><dd>Welche Objekte und Pflegeleistungen möchtest du betreuen?</dd></div><div><dt>Einsatzgebiet & Turnus</dt><dd>Welche Wege und regelmäßigen Einsätze sind sinnvoll?</dd></div><div><dt>Ansprechpartner & Bedarf</dt><dd>Wer entscheidet – und welche Aufgaben sollen übernommen werden?</dd></div></dl><a class="btn-link" href="#kontakt">Über diesen Schwerpunkt sprechen <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div><div id="focus-pflanzen" role="tabpanel" aria-labelledby="tab-pflanzen" class="growth-focus-panel" hidden><figure><img src="assets/img/productions/woerlein-plants.webp" alt="Mitarbeiter der Baumschule Wörlein bei der Arbeit an einem Baum" width="1280" height="853" loading="lazy"><figcaption>Ein möglicher Schwerpunkt für deine Neukundengewinnung</figcaption></figure><div class="growth-focus-copy"><span class="growth-kicker">Dein Angebot gibt die Richtung vor</span><h3>Pflanzen begeistern.<br>Und Kunden zu dir bringen.</h3><p>Mache Sortiment, Fachwissen und Beratung sichtbar. Gib Privatkunden oder gewerblichen Abnehmern einen konkreten Anlass, deinen Betrieb zu entdecken.</p><dl><div><dt>Sortiment & Zielgruppe</dt><dd>Welche Pflanzen und welche Käufer möchtest du erreichen?</dd></div><div><dt>Saison & Anlass</dt><dd>Was ist jetzt relevant – vom Pflanzprojekt bis zur Saisonaktion?</dd></div><div><dt>Besuch & Anfrage</dt><dd>Führt der nächste Schritt in deinen Betrieb oder zur persönlichen Beratung?</dd></div></dl><a class="btn-link" href="#kontakt">Über diesen Schwerpunkt sprechen <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div></div></section><section class="section growth-process" id="vorgehen"><div class="container growth-process-grid"><div class="growth-process-intro"><span class="pill">So arbeiten wir zusammen</span><h2>Von „Sieht gut aus“<br>zu <em>„Lass uns sprechen.“</em></h2><p>Neukundengewinnung wirkt, wenn die Schritte zusammenpassen. Wir verbinden deinen Auftritt mit einem klaren Weg zur Anfrage – und behalten gemeinsam die Qualität im Blick.</p><figure><img src="assets/img/live/jensen-garden.webp" width="1280" height="854" loading="lazy" alt="Persönliche Abstimmung über eine Gartenplanung bei Jensen Landschaftsarchitekten"><figcaption>Gute Projekte beginnen mit einem guten Gespräch.</figcaption></figure></div><div class="growth-steps"><article><div class="growth-step-number">01</div><div><span class="growth-kicker">Die Richtung klären</span><h3>Dein Betrieb gibt den Plan vor.</h3><p>Wir schauen auf deine Wunschprojekte, dein Einsatzgebiet und deine Kapazität. Daraus entwickeln wir ein Angebot, das für die richtigen Kunden relevant ist.</p><div class="growth-step-outcome"><span>Dein Ergebnis</span><strong>Ein klarer Schwerpunkt für die Kampagne.</strong></div></div></article><article><div class="growth-step-number">02</div><div><span class="growth-kicker">Qualität sichtbar machen</span><h3>Zeigen, warum du die richtige Wahl bist.</h3><p>Echte Projekte, Menschen und Fachwissen machen deinen Betrieb greifbar. Anzeigen und eine passende Zielseite führen dieselbe Geschichte weiter.</p><div class="growth-step-outcome"><span>Dein Ergebnis</span><strong>Ein Auftritt, der deine Leistung verständlich macht.</strong></div></div></article><article><div class="growth-step-number">03</div><div><span class="growth-kicker">Anfragen einordnen</span><h3>Vor dem Termin wissen, worum es geht.</h3><p>Projektart, Region, Umfang und Zeitrahmen helfen, Anfragen einzuordnen. Wir stimmen mit dir ab, welche Informationen und welche Form der Vorqualifizierung sinnvoll sind.</p><div class="growth-step-outcome"><span>Dein Ergebnis</span><strong>Mehr Klarheit für das erste Gespräch.</strong></div></div></article><article><div class="growth-step-number">04</div><div><span class="growth-kicker">Gemeinsam besser werden</span><h3>Bis zum Auftrag hinschauen.</h3><p>Wir betrachten, aus welchen Anfragen Gespräche, Angebote und Aufträge entstehen. Dein Feedback hilft, Ansprache und Kampagnen gezielt weiterzuentwickeln.</p><div class="growth-step-outcome"><span>Dein Ergebnis</span><strong>Eine gemeinsame Grundlage für die nächsten Entscheidungen.</strong></div></div></article></div></div></section><section class="section growth-work"><div class="container"><div class="growth-heading"><div><span class="pill">Qualität wird sichtbar</span><h2>Deine Arbeit ist<br><span class="mark-u">dein stärkstes Argument.</span></h2></div><p>Menschen sollen sehen, was dein Betrieb kann. Deshalb zeigen wir echte Arbeit und echte Persönlichkeiten – vom Gartenprojekt bis zur Pflanzenberatung.</p></div><div class="growth-work-grid"><a href="social-media.html#case-schwingel"><figure><img src="assets/img/productions/schwingel-pool.webp" width="1800" height="1200" loading="lazy" alt="Mitarbeiter von Gartengestaltung Schwingel beim Poolbau"></figure><div><span>Gartengestaltung Schwingel</span><strong>Handwerk mit Gesicht.</strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div></a><a href="social-media.html#case-woerlein"><figure><img src="assets/img/productions/woerlein-plants.webp" width="1800" height="1200" loading="lazy" alt="Pflanzenpflege in der Baumschule Wörlein"></figure><div><span>Wörlein Baumschulen</span><strong>Fachwissen, das Vertrauen schafft.</strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div></a><a href="social-media.html#case-streb"><figure><img src="assets/img/live/streb.webp" width="1280" height="720" loading="lazy" alt="Tobias Stierle vom Gartencenter Streb im Kundeninterview"></figure><div><span>Gartencenter Streb</span><strong>Ein Betrieb, den man kennenlernt.</strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div></a></div><p class="growth-work-note">Einblicke in unsere Content-Produktion und Markenarbeit. Entdecke die Kunden und ihre Filme.</p></div></section><section class="section growth-partnership"><div class="container growth-partnership-grid"><div><span class="growth-kicker">Deine Branche. Unser Alltag.</span><h2>Ein Partner, der<br><em>deine Welt versteht.</em></h2><p>Im GaLaBau zählen andere Projekte als im Gartencenter. Wir kennen die Menschen, Leistungen und Jahreszeiten der grünen Branche – und bringen dieses Verständnis in deinen Auftritt ein.</p><div class="partner-mini">
 <span>Exklusiver Verbands-Partner</span>
 <div class="pm-logos"><img alt="Verbandspartner – Die Experten für Garten &amp; Landschaft" height="567" src="assets/img/live/partner-1.webp" width="1000"/><img alt="Verband Deutscher Garten-Center" height="567" src="assets/img/live/partner-2.webp" width="1000"/><img alt="Bund deutscher Baumschulen e.V." height="567" src="assets/img/live/partner-3.webp" width="1000"/></div>
-</div></div>
-<figure class="refined-hero-photo"><img alt="Zwei Mitarbeiter von Gartengestaltung Schwingel beim Poolbau" decoding="async" fetchpriority="high" height="1200" src="assets/img/productions/schwingel-pool.webp" width="1800"/><figcaption>Einblicke aus unserer Produktion bei Gartengestaltung Schwingel</figcaption></figure></div>
-</div>
-</section>
-<section class="section section--tint" id="vorgehen">
-<div class="container">
-<div class="section-head reveal">
-<span class="pill">Unser Vorgehen</span>
-<h2>Aus guter Arbeit werden<br/><span class="mark-u">neue Aufträge.</span></h2>
-</div>
-<div class="steps-grid cols-3 m-carousel">
-<div class="step-card reveal">
-<span class="num">01</span>
-<h4>Zielgruppe definieren</h4>
-<p>Wir analysieren deinen Wunschkunden und legen fest, wo und wie wir ihn am besten erreichen.</p>
-</div>
-<div class="step-card reveal" style="--d:.1s">
-<span class="num">02</span>
-<h4>Kampagne starten</h4>
-<p>Wir entwickeln und schalten Kampagnen, die deine Lösung sichtbar machen – auf den passenden Kanälen.</p>
-</div>
-<div class="step-card reveal" style="--d:.2s">
-<span class="num">03</span>
-<h4>Leads generieren</h4>
-<p>Interessenten hinterlassen ihre Daten – du bekommst einen kontinuierlichen Strom an Anfragen.</p>
-</div>
-<div class="step-card reveal">
-<span class="num">04</span>
-<h4>Leads qualifizieren</h4>
-<p>Wir filtern unpassende Anfragen heraus – du sprichst nur mit echten Interessenten.</p>
-</div>
-<div class="step-card reveal" style="--d:.1s">
-<span class="num">05</span>
-<h4>Termine vereinbaren</h4>
-<p>Qualifizierte Leads werden zu Terminen – direkt in deinem Kalender, ohne Mehraufwand.</p>
-</div>
-<div class="step-card reveal" style="--d:.2s">
-<span class="num">06</span>
-<h4>Wachstum skalieren</h4>
-<p>Funktioniert die Kampagne, skalieren wir sie – für planbares, kontinuierliches Wachstum.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container">
-<div class="tp-grid">
-<div>
-<div class="section-head left reveal" style="margin-bottom:34px;">
-<span class="pill">So funktioniert Touchpoint-Marketing</span>
-<h2>Aus Aufmerksamkeit wird <span class="mark-u">Vertrauen<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 240 24"><path d="M6 16 C 60 8, 175 6, 234 13"></path></svg></span></h2>
-</div>
-<ul class="tp-list">
-<li class="reveal" style="--d:.0s"><span class="tp-check"></span><div><h4>Erster Eindruck</h4><p>Wir machen deinen Betrieb dort sichtbar, wo deine Wunschkunden unterwegs sind.</p></div></li>
-<li class="reveal" style="--d:.1s"><span class="tp-check"></span><div><h4>Wiederkehrung</h4><p>Durch Retargeting bleibst du präsent – Wiedererkennung schafft Vertrauen.</p></div></li>
-<li class="reveal" style="--d:.2s"><span class="tp-check"></span><div><h4>Handlungsimpuls</h4><p>Klare Calls-to-Action führen Interessenten zur Anfrage – ohne Reibung.</p></div></li>
-<li class="reveal" style="--d:.3s"><span class="tp-check"></span><div><h4>Vertrauen &amp; Nähe</h4><p>Authentische Einblicke machen deinen Betrieb greifbar und nahbar.</p></div></li>
-<li class="reveal" style="--d:.4s"><span class="tp-check"></span><div><h4>Webinar &amp; Mehrwert</h4><p>Mit echtem Mehrwert positionierst du dich als Experte und Problemlöser.</p></div></li>
-<li class="reveal" style="--d:.5s"><span class="tp-check"></span><div><h4>Emotion &amp; Identifikation</h4><p>Menschen kaufen von Menschen – Emotion macht aus Interessenten Kunden.</p></div></li>
-</ul>
-</div>
-<div aria-hidden="true" class="phone-mock reveal">
-<div class="pm-toast"><span class="dot-ok"></span>Neue Kundenanfrage</div>
-<span class="island"></span>
-<div class="screen">
-<div class="statusbar"><span>9:41</span><span class="sb-icons"><i class="i2"></i><i class="i2" style="height:7px"></i><i class="i1"></i></span></div>
-<div class="app-head"><b>Deine Anfragen</b><span class="live"><i></i>Live</span></div>
-<div class="pm-job" style="margin-top:0;">
-<span class="tagline">Neu eingegangen</span>
-<b>Gartenneuanlage · Privatkunde</b>
-<small>qualifiziert · in deiner Region</small>
-<div class="pm-btn">Termin ansehen</div>
-</div>
-<div class="pm-feed">
-<ul>
-<li><span class="av">GA</span><span><b>Gartenneuanlage</b><small>Privatkunde · qualifiziert</small></span><span class="ok"></span></li>
-<li><span class="av">PF</span><span><b>Pflasterarbeiten</b><small>Privatkunde · Termin gebucht</small></span><span class="ok"></span></li>
-<li><span class="av">DB</span><span><b>Dachbegrünung</b><small>Gewerbekunde · qualifiziert</small></span><span class="ok"></span></li>
-<li><span class="av">HP</span><span><b>Heckenpflege</b><small>Privatkunde · Rückruf vereinbart</small></span><span class="ok"></span></li>
-<li><span class="av">TB</span><span><b>Teichbau</b><small>Privatkunde · qualifiziert</small></span><span class="ok"></span></li>
-<li><span class="av">GA</span><span><b>Gartenneuanlage</b><small>Privatkunde · qualifiziert</small></span><span class="ok"></span></li>
-<li><span class="av">PF</span><span><b>Pflasterarbeiten</b><small>Privatkunde · Termin gebucht</small></span><span class="ok"></span></li>
-<li><span class="av">DB</span><span><b>Dachbegrünung</b><small>Gewerbekunde · qualifiziert</small></span><span class="ok"></span></li>
-<li><span class="av">HP</span><span><b>Heckenpflege</b><small>Privatkunde · Rückruf vereinbart</small></span><span class="ok"></span></li>
-<li><span class="av">TB</span><span><b>Teichbau</b><small>Privatkunde · qualifiziert</small></span><span class="ok"></span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section section--tint">
-<div class="container">
-<div class="section-head reveal">
-<span class="pill">Unsere Arbeit, deine Bilanz</span>
-<h2>Zahlen, die für sich <span class="mark-u">sprechen<svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 240 24"><path d="M6 16 C 60 8, 175 6, 234 13"></path></svg></span></h2>
-</div>
-<div class="stats-grid-4">
-<div class="stat-card reveal">
-<div class="num"><span data-count="9">0</span>+</div>
-<div class="label">Jahre Erfahrung</div>
-<p class="desc">aus und für die grüne Branche</p>
-</div>
-<div class="stat-card reveal" style="--d:.1s">
-<div class="num">+<span data-count="180">0</span></div>
-<div class="label">Durchgeführte Projekte</div>
-<p class="desc">erfolgreich umgesetzt</p>
-</div>
-<div class="stat-card reveal" style="--d:.2s">
-<div class="num">+<span data-count="14400" data-sep=".">0</span></div>
-<div class="label">Neukundenanfragen</div>
-<p class="desc">für unsere Kunden generiert</p>
-</div>
-<div class="stat-card reveal" style="--d:.3s">
-<div class="num">+<span data-count="4300" data-sep=".">0</span></div>
-<div class="label">Neukundenaufträge</div>
-<p class="desc">daraus entstanden</p>
-</div>
-</div>
-</div>
-</section>
-<section class="a-proof section" id="kundenstimmen"><div class="container"><div class="refined-section-head"><div><p class="pill">Kundenstimmen</p><h2>Erfolg, der für sich spricht.</h2></div><div><p>Menschen aus der grünen Branche erzählen, was sich durch unsere Zusammenarbeit verändert hat.</p><a class="btn-link" href="ergebnisse.html">Alle Erfolgsgeschichten <span class="arr">↗</span></a></div></div><div class="a-film-grid"><article class="a-film-card reveal"><button aria-label="Kundenfilm von Scheidtmann Garten- und Landschaftsbau ansehen" class="a-video" data-title="Scheidtmann Garten- und Landschaftsbau" data-video="1055947619" type="button"><img alt="Florian Scheidtmann · Geschäftsführer im Kundeninterview" height="545" loading="lazy" src="assets/img/live/scheidtmann.webp" width="1000"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">GaLaBau</span><h3>Scheidtmann Garten- und Landschaftsbau</h3><p>1 Bauleiter &amp; 2 ausgebildete Landschaftsgärtner eingestellt</p><p class="a-person">Florian Scheidtmann · Geschäftsführer</p></div></article><article class="a-film-card reveal"><button aria-label="Kundenfilm von Gartencenter Streb ansehen" class="a-video" data-title="Gartencenter Streb" data-video="984313309" type="button"><img alt="Tobias Stierle · Betriebsleiter im Kundeninterview" height="562" loading="lazy" src="assets/img/live/streb.webp" width="1000"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">Gartencenter</span><h3>Gartencenter Streb</h3><blockquote>„Das hat mich brutal überrascht.“</blockquote><p class="a-person">Tobias Stierle · Betriebsleiter</p></div></article><article class="a-film-card reveal"><button aria-label="Kundenfilm von Pflanzenhandel Huben ansehen" class="a-video" data-title="Pflanzenhandel Huben" data-video="863962598" type="button"><img alt="Carlo Huben &amp; Anna Schick im Kundeninterview" height="540" loading="lazy" src="assets/img/live/huben.webp" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">Pflanzenhandel</span><h3>Pflanzenhandel Huben</h3><blockquote>„Greenfield Digital arbeitet äußerst professionell und liefert sehr gute Ergebnisse in kurzer Zeit.“</blockquote><p class="a-person">Carlo Huben &amp; Anna Schick</p></div></article><article class="a-film-card"><button aria-label="Kundenfilm von Grün Team GmbH ansehen" class="a-video" data-title="Grün Team GmbH" data-video="863991343" type="button"><img alt="Michael Bleichner · Geschäftsführer im Kundeninterview" height="540" loading="lazy" src="assets/img/live/gruenteam-testimonial.jpg" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN</span></button><div class="a-film-copy"><p class="a-eyebrow">GALABAU</p><h3>Grün Team GmbH</h3><p>Ein persönlicher Einblick in die Zusammenarbeit mit Greenfield Digital.</p><p class="a-person">Michael Bleichner · Geschäftsführer</p></div></article><article class="a-film-card"><button aria-label="Kundenfilm von Schmitt &amp; Steul ansehen" class="a-video" data-title="Schmitt &amp; Steul" data-video="863964463" type="button"><img alt="Vincent Schmitt · Geschäftsführer im Kundeninterview" height="540" loading="lazy" src="assets/img/live/schmitt-steul.jpg" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN</span></button><div class="a-film-copy"><p class="a-eyebrow">GALABAU</p><h3>Schmitt &amp; Steul</h3><p>Ein persönlicher Einblick in die Zusammenarbeit mit Greenfield Digital.</p><p class="a-person">Vincent Schmitt · Geschäftsführer</p></div></article></div><div class="slider-controls"><p>5 persönliche Kundenstimmen · Zum Weitersehen wischen</p><div class="slider-buttons"><button aria-label="Vorherige Kundenfilme" data-slide="-1" type="button">←</button><button aria-label="Weitere Kundenfilme" data-slide="1" type="button">→</button></div></div><p class="a-video-privacy">Kundenfilme von Vimeo. Erst beim Abspielen wird eine Verbindung zu Vimeo hergestellt.</p></div></section>
-<section class="section section--tint" id="kontakt">
+</div></div><div class="growth-promises"><article><span>01</span><div><h3>Wir denken vom Betrieb aus.</h3><p>Deine Wunschkunden, dein Einzugsgebiet und deine Kapazität geben die Richtung vor.</p></div></article><article><span>02</span><div><h3>Du weißt, woran wir arbeiten.</h3><p>Wir stimmen Ziele und Maßnahmen mit dir ab und sprechen über die Qualität der Anfragen.</p></div></article><article><span>03</span><div><h3>Wir verbinden die Bausteine.</h3><p>Strategie, Inhalte, Kampagnen und Zielseite folgen einem gemeinsamen Plan.</p></div></article><a class="growth-text-link" href="ueber-uns.html">Lerne Greenfield kennen <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div></div></section><section class="a-proof section" id="kundenstimmen"><div class="container"><div class="refined-section-head"><div><p class="pill">Kundenstimmen</p><h2>Vertrauen entsteht<br>in der Zusammenarbeit.</h2></div><div><p>Wie erleben Betriebe die Arbeit mit Greenfield? Unsere Kunden erzählen von ihren Erfahrungen aus verschiedenen Leistungen.</p><a class="btn-link" href="ergebnisse.html">Alle Erfolgsgeschichten <span class="arr">↗</span></a></div></div><div class="a-film-grid"><article class="a-film-card reveal"><button aria-label="Kundenfilm von Scheidtmann Garten- und Landschaftsbau ansehen" class="a-video" data-title="Scheidtmann Garten- und Landschaftsbau" data-video="1055947619" type="button"><img alt="Florian Scheidtmann · Geschäftsführer im Kundeninterview" height="545" loading="lazy" src="assets/img/live/scheidtmann.webp" width="1000"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">GaLaBau</span><h3>Scheidtmann Garten- und Landschaftsbau</h3><p>1 Bauleiter &amp; 2 ausgebildete Landschaftsgärtner eingestellt</p><p class="a-person">Florian Scheidtmann · Geschäftsführer</p></div></article><article class="a-film-card reveal"><button aria-label="Kundenfilm von Gartencenter Streb ansehen" class="a-video" data-title="Gartencenter Streb" data-video="984313309" type="button"><img alt="Tobias Stierle · Betriebsleiter im Kundeninterview" height="562" loading="lazy" src="assets/img/live/streb.webp" width="1000"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">Gartencenter</span><h3>Gartencenter Streb</h3><blockquote>„Das hat mich brutal überrascht.“</blockquote><p class="a-person">Tobias Stierle · Betriebsleiter</p></div></article><article class="a-film-card reveal"><button aria-label="Kundenfilm von Pflanzenhandel Huben ansehen" class="a-video" data-title="Pflanzenhandel Huben" data-video="863962598" type="button"><img alt="Carlo Huben &amp; Anna Schick im Kundeninterview" height="540" loading="lazy" src="assets/img/live/huben.webp" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN ↗</span></button><div class="a-film-copy"><span class="a-eyebrow">Pflanzenhandel</span><h3>Pflanzenhandel Huben</h3><blockquote>„Greenfield Digital arbeitet äußerst professionell und liefert sehr gute Ergebnisse in kurzer Zeit.“</blockquote><p class="a-person">Carlo Huben &amp; Anna Schick</p></div></article><article class="a-film-card"><button aria-label="Kundenfilm von Grün Team GmbH ansehen" class="a-video" data-title="Grün Team GmbH" data-video="863991343" type="button"><img alt="Michael Bleichner · Geschäftsführer im Kundeninterview" height="540" loading="lazy" src="assets/img/live/gruenteam-testimonial.jpg" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN</span></button><div class="a-film-copy"><p class="a-eyebrow">GALABAU</p><h3>Grün Team GmbH</h3><p>Ein persönlicher Einblick in die Zusammenarbeit mit Greenfield Digital.</p><p class="a-person">Michael Bleichner · Geschäftsführer</p></div></article><article class="a-film-card"><button aria-label="Kundenfilm von Schmitt &amp; Steul ansehen" class="a-video" data-title="Schmitt &amp; Steul" data-video="863964463" type="button"><img alt="Vincent Schmitt · Geschäftsführer im Kundeninterview" height="540" loading="lazy" src="assets/img/live/schmitt-steul.jpg" width="960"/><span aria-hidden="true" class="a-play">▶</span><span class="a-video-label">KUNDENFILM ANSEHEN</span></button><div class="a-film-copy"><p class="a-eyebrow">GALABAU</p><h3>Schmitt &amp; Steul</h3><p>Ein persönlicher Einblick in die Zusammenarbeit mit Greenfield Digital.</p><p class="a-person">Vincent Schmitt · Geschäftsführer</p></div></article></div><div class="slider-controls"><p>5 persönliche Kundenstimmen · Zum Weitersehen wischen</p><div class="slider-buttons"><button aria-label="Vorherige Kundenfilme" data-slide="-1" type="button">←</button><button aria-label="Weitere Kundenfilme" data-slide="1" type="button">→</button></div></div><p class="a-video-privacy">Kundenfilme von Vimeo. Erst beim Abspielen wird eine Verbindung zu Vimeo hergestellt.</p></div></section><section class="section growth-faq" id="fragen"><div class="container growth-faq-grid"><div><span class="pill">Vor unserem ersten Gespräch</span><h2>Gute Fragen.<br><span class="mark-u">Klare Antworten.</span></h2><p>Dein Betrieb ist individuell. Hier findest du eine erste Orientierung zur Zusammenarbeit.</p><a class="btn-link" href="#kontakt">Deine Frage persönlich besprechen <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div><div><details><summary>Für welche Betriebe eignet sich die Zusammenarbeit?<span aria-hidden="true">+</span></summary><p>Für Betriebe der grünen Branche: etwa Garten- und Landschaftsbau, Baumschulen, Gartencenter und Pflanzenhandel. Im Erstgespräch klären wir dein Angebot, deine Ziele und die Frage, welcher Ansatz zu deinem Betrieb passt.</p></details><details><summary>Wie sorgen wir für passende Anfragen?<span aria-hidden="true">+</span></summary><p>Wir grenzen Zielgruppe, Leistung und Einsatzgebiet gemeinsam ein. Dazu stimmen wir Fragen ab, die Bedarf, Umfang und Zeitraum eines Vorhabens verständlich machen. Dein Feedback zu den Gesprächen fließt in die weitere Ausrichtung ein.</p></details><details><summary>Brauche ich dafür eine neue Website?<span aria-hidden="true">+</span></summary><p>Das hängt von deinem bestehenden Auftritt ab. Wir prüfen, ob Interessenten dein Angebot verstehen und leicht anfragen können. Manchmal lässt sich die vorhandene Seite verbessern; für einen klaren Schwerpunkt kann eine eigene Landingpage sinnvoll sein.</p></details><details><summary>Wie schnell kann ich mit Anfragen rechnen?<span aria-hidden="true">+</span></summary><p>Das hängt unter anderem von Angebot, Region, Saison, Wettbewerb und Werbebudget ab. Zum Start legen wir fest, wie wir die Kampagne bewerten und wann wir erste Erkenntnisse gemeinsam besprechen.</p></details><details><summary>Was kostet die Zusammenarbeit?<span aria-hidden="true">+</span></summary><p>Das Angebot richtet sich nach den vereinbarten Leistungen. Im Gespräch klären wir, welche Unterstützung du brauchst und welches Werbebudget sinnvoll ist. Umfang, Kosten und Laufzeit besprechen wir vor dem Start.</p></details><details><summary>Was brauche ich für das Erstgespräch?<span aria-hidden="true">+</span></summary><p>Einen Überblick über deinen Betrieb und eine Idee, welche Kunden oder Aufträge du gewinnen möchtest. Auch wenn du das noch nicht genau weißt, können wir gemeinsam einen sinnvollen Ausgangspunkt finden.</p></details></div></div></section><section class="section section--tint" id="kontakt">
 <div class="container">
 <div class="contact-split">
 <div class="reveal contact-intro">
 <div class="section-head">
-<span class="pill">Jetzt Unterstützung anfordern</span>
-<h2>Du benötigst Unterstützung?</h2>
-<p class="sub">Lass uns über dein Wachstum sprechen. Im kostenlosen Erstgespräch entwickeln wir deine Strategie.</p>
+<span class="pill">Dein nächster Schritt</span>
+<h2>Welche Kunden<br>willst du gewinnen?</h2>
+<p class="sub">Erzähl uns von deinem Betrieb und den Aufträgen, die du häufiger gewinnen möchtest. Wir besprechen, wo du heute stehst und welcher nächste Schritt sinnvoll ist.</p>
 </div>
 <div class="founder-strip">
 <img alt="Frederik Linke, Gründer und Geschäftsführer von Greenfield Digital" decoding="async" height="1400" src="assets/img/live/frederik.webp" width="933"/>
@@ -254,7 +241,7 @@
 <span>Kostenlos</span>
 <span>48h Antwortzeit</span>
 </div>
-<div class="contact-next"><h3>Das erwartet dich im Erstgespräch</h3><ol><li><div><b>Deinen Betrieb verstehen.</b>Wo stehst du heute – und was möchtest du verändern?</div></li><li><div><b>Die richtigen Hebel finden.</b>Wir betrachten Marke, Mitarbeiter und Neukunden gemeinsam.</div></li><li><div><b>Einen klaren nächsten Schritt festlegen.</b>Du erfährst, welche Maßnahmen zu deinem Betrieb passen.</div></li></ol><div class="contact-direct"><a href="tel:+4922195018825">+49 (0) 221 95 01 88 25</a><a href="mailto:hello@greenfield-digital.de">E-Mail schreiben ↗</a></div></div></div>
+<div class="contact-next"><h3>Das erwartet dich im Erstgespräch</h3><ol><li><div><b>Deinen Betrieb verstehen.</b>Wo stehst du heute – und was möchtest du verändern?</div></li><li><div><b>Die richtigen Hebel finden.</b>Wir schauen auf dein Angebot, deine Region und die bisherigen Anfragen.</div></li><li><div><b>Einen klaren nächsten Schritt festlegen.</b>Du erfährst, welche Maßnahmen zu deinem Betrieb passen.</div></li></ol><div class="contact-direct"><a href="tel:+4922195018825">+49 (0) 221 95 01 88 25</a><a href="mailto:hello@greenfield-digital.de">E-Mail schreiben ↗</a></div></div></div>
 <div class="contact-card card reveal" style="--d:.12s">
 <form class="inquiry-compact inquiry-form" data-endpoint="https://hook.eu1.make.com/dpi3yxzn8knq3wimr36vg9hg64oz5l7h" novalidate="">
 <div class="inquiry-heading"><strong>Dein nächster Schritt.</strong><span>Kostenlos &amp; unverbindlich.</span></div>
@@ -287,43 +274,7 @@
 </div>
 </div>
 </div>
-</section>
-<section class="section">
-<div class="container">
-<div class="section-head reveal">
-<span class="pill">FAQ</span>
-<h2>Fragen &amp; Antworten</h2>
-</div>
-<div class="faq">
-<details class="reveal">
-<summary>Für welche Betriebe funktioniert die Neukundengewinnung?</summary>
-<div class="faq-body">Für Betriebe der grünen Branche – Garten- und Landschaftsbau, Baumschulen, Gartencenter, Gartenbau und verwandte Bereiche – vom Familienbetrieb bis zum Mittelständler.</div>
-</details>
-<details class="reveal">
-<summary>Woher weiß ich, dass die Anfragen etwas taugen?</summary>
-<div class="faq-body">Wir qualifizieren jede Anfrage vor, bevor sie bei dir landet. Du sprichst nur mit Interessenten, die zu deinem Angebot und deiner Region passen.</div>
-</details>
-<details class="reveal">
-<summary>Welche Kosten entstehen?</summary>
-<div class="faq-body">Die Kosten variieren je nach Umfang und Anforderungen deines Projekts. Im unverbindlichen Beratungsgespräch erstellen wir dir ein individuelles Angebot.</div>
-</details>
-<details class="reveal">
-<summary>Muss ich langfristige Verträge eingehen?</summary>
-<div class="faq-body">Nein – bei uns gibt es keine festen Vertragslaufzeiten. Du kannst unsere Unterstützung jederzeit in Anspruch nehmen.</div>
-</details>
-<details class="reveal">
-<summary>Wie viel Aufwand habe ich selbst?</summary>
-<div class="faq-body">Sehr wenig: Nach dem Onboarding laufen Kampagnen, Qualifizierung und Terminierung über uns. Du konzentrierst dich auf die Gespräche.</div>
-</details>
-</div>
-</div>
-</section>
-<section class="cta-band cta-band--people"><div class="container cta-people-grid"><div class="cta-people-copy reveal">
-<h2>Bereit für dein grünes Wachstum?</h2>
-<p>Lass uns herausfinden, wie dein Betrieb als Marke wächst – und die richtigen Menschen gewinnt.</p>
-<a class="btn btn--white is-green-text btn--lg" href="#kontakt">Kostenloses Gespräch vereinbaren</a>
-</div><figure class="cta-people-image reveal"><img src="assets/img/live/koepsel-garden.webp" alt="Das Team von Köpsel gemeinsam auf dem Betriebsgelände" width="1280" height="787" loading="lazy"></figure></div></section>
-</main>
+</section></main>
 <footer class="site-footer">
 <div class="container">
 <div class="cols">
@@ -384,5 +335,34 @@
 </div>
 <button aria-pressed="false" class="a-motion" type="button">Animationen pausieren Ⅱ</button></footer>
 <script defer="" src="assets/js/main.js?v=3"></script>
-<script defer="True" src="assets/js/atelier.js?v=4"></script><script defer="True" src="assets/js/refinement.js?v=2"></script><dialog aria-labelledby="video-title" class="a-video-dialog"><div class="a-dialog-top"><h2 id="video-title">Kundenfilm</h2><button aria-label="Video schließen" class="a-dialog-close" type="button">✕</button></div><div class="a-player"></div><p>Original-Kundeninterview auf Vimeo. <a class="a-video-external" href="https://vimeo.com" rel="noopener noreferrer" target="_blank">Video direkt auf Vimeo öffnen ↗</a></p></dialog><script defer="" src="assets/js/finish.js?v=7"></script><script defer src="assets/js/services.js?v=3"></script><script defer src="assets/js/launch.js?v=1"></script></body>
+<script defer="True" src="assets/js/atelier.js?v=4"></script><script defer="True" src="assets/js/refinement.js?v=2"></script><dialog aria-labelledby="video-title" class="a-video-dialog"><div class="a-dialog-top"><h2 id="video-title">Kundenfilm</h2><button aria-label="Video schließen" class="a-dialog-close" type="button">✕</button></div><div class="a-player"></div><p>Original-Kundeninterview auf Vimeo. <a class="a-video-external" href="https://vimeo.com" rel="noopener noreferrer" target="_blank">Video direkt auf Vimeo öffnen ↗</a></p></dialog><script defer="" src="assets/js/finish.js?v=7"></script><script defer src="assets/js/services.js?v=3"></script><script defer src="assets/js/launch.js?v=1"></script><script id="neukunden-interaction">
+/* The visitor chooses a campaign focus; viewing a topic never changes or submits the contact form. */
+(() => {
+ 'use strict';
+ const group=document.querySelector('.growth-focus-tabs');
+ if(!group)return;
+ const tabs=[...group.querySelectorAll('[role="tab"]')];
+ const select=(index,focus=false)=>{
+  tabs.forEach((tab,i)=>{
+   const active=i===index;
+   tab.setAttribute('aria-selected',String(active));
+   tab.tabIndex=active?0:-1;
+   document.getElementById(tab.getAttribute('aria-controls')).hidden=!active;
+  });
+  if(focus)tabs[index].focus({preventScroll:true});
+ };
+ tabs.forEach((tab,i)=>{
+  tab.addEventListener('click',()=>select(i));
+  tab.addEventListener('keydown',event=>{
+   let index;
+   if(event.key==='ArrowRight')index=(i+1)%tabs.length;
+   if(event.key==='ArrowLeft')index=(i-1+tabs.length)%tabs.length;
+   if(event.key==='Home')index=0;
+   if(event.key==='End')index=tabs.length-1;
+   if(index!==undefined){event.preventDefault();select(index,true);}
+  });
+ });
+})();
+
+</script></body>
 </html>
