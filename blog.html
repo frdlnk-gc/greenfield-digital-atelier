@@ -20,6 +20,24 @@
 <link rel="stylesheet" href="assets/css/launch.css?v=2">
 <link rel="stylesheet" href="assets/css/editorial.css?v=1"/>
 
+
+<style>
+.page-blog .blog-resource-hero { display:grid; grid-template-columns:1fr 1.05fr; align-items:stretch; background:var(--forest); }
+.page-blog .blog-resource-hero .hero-inner { align-self:center; max-width:none; padding:clamp(32px,4vw,56px); }
+.page-blog .blog-resource-hero h1 { font-size:clamp(2.2rem,3.8vw,3.3rem); }
+.page-blog .blog-resource-hero .sub { max-width:39ch; }
+.blog-hero-photo { position:relative; margin:0; min-width:0; }
+.blog-hero-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:55% 35%; }
+.blog-hero-photo::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--forest),transparent 24%); pointer-events:none; }
+@media(max-width:760px) {
+  .page-blog .blog-resource-hero { grid-template-columns:1fr; }
+  .page-blog .blog-resource-hero .hero-inner { padding:30px 24px; }
+  .page-blog .blog-resource-hero h1 { font-size:clamp(2rem,8vw,2.65rem); }
+  .page-blog .blog-resource-hero .sub { margin-bottom:24px; }
+  .blog-hero-photo img { height:auto; }
+  .blog-hero-photo::after { background:linear-gradient(180deg,var(--forest),transparent 18%); }
+}
+</style>
 <!-- BLOG_INDEX_SCHEMA_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Greenfield Wissen & Impulse","itemListElement":[{"@type":"ListItem","position":1,"name":"Branding im GaLaBau: warum ein klarer Auftritt die Zusammenarbeit erleichtert","url":"https://www.greenfield-digital.de/blog-branding-galabau.html"},{"@type":"ListItem","position":2,"name":"GaLaBau-Website: was Kunden vor einer Anfrage wirklich wissen wollen","url":"https://www.greenfield-digital.de/blog-galabau-website.html"},{"@type":"ListItem","position":3,"name":"Gartencenter-Marketing: ein Saisonplan, der Lust auf einen Besuch macht","url":"https://www.greenfield-digital.de/blog-gartencenter-marketing.html"},{"@type":"ListItem","position":4,"name":"Local SEO für GaLaBau: in deiner Region besser gefunden werden","url":"https://www.greenfield-digital.de/blog-local-seo-galabau.html"},{"@type":"ListItem","position":5,"name":"Marketing für Baumschulen: Fachwissen sichtbar und Anfragen konkreter machen","url":"https://www.greenfield-digital.de/blog-marketing-baumschulen.html"},{"@type":"ListItem","position":6,"name":"Mitarbeiter finden im GaLaBau: vom Stellenangebot zum passenden Team","url":"https://www.greenfield-digital.de/blog-mitarbeiter-finden-galabau.html"},{"@type":"ListItem","position":7,"name":"Neukundengewinnung im GaLaBau: mehr passende Projektanfragen","url":"https://www.greenfield-digital.de/blog-neukundengewinnung-galabau.html"},{"@type":"ListItem","position":8,"name":"Recruiting-Video im GaLaBau: ein Drehplan, der deinen Betrieb zeigt","url":"https://www.greenfield-digital.de/blog-recruiting-video-galabau.html"},{"@type":"ListItem","position":9,"name":"SEO und GEO für die grüne Branche: in Google und KI-Suchen verständlich werden","url":"https://www.greenfield-digital.de/blog-seo-geo-gruene-branche.html"},{"@type":"ListItem","position":10,"name":"Social Media im GaLaBau: ein Redaktionsplan für echte Projekte","url":"https://www.greenfield-digital.de/blog-social-media-galabau.html"},{"@type":"ListItem","position":11,"name":"Klimafeste Bäume: 7 Fragen vor der Herbstpflanzung","url":"https://www.greenfield-digital.de/blog-klimafeste-baeume.html"},{"@type":"ListItem","position":12,"name":"Lavendel als Begleitpflanze","url":"https://www.greenfield-digital.de/blog-artikel.html"}]}</script><!-- BLOG_INDEX_SCHEMA_END -->
 <meta property="og:image" content="https://www.greenfield-digital.de/assets/img/social/blog-45e0ff739b.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -74,14 +92,14 @@
 <main id="main-content">
 <section class="page-hero">
 <div class="container">
-<div class="hero-card reveal in">
-<div aria-hidden="true" class="bg" style="background-image:url('assets/img/blog-3.jpg')"></div>
+<div class="hero-card blog-resource-hero reveal in">
 <div class="hero-inner">
 <span class="pill pill--glow"><span class="dot"></span>Praxiswissen für die grüne Branche</span>
 <h1>Neue Impulse.<br/><span class="accent">Für die grüne Branche.</span></h1>
 <p class="sub">Jede Woche ein neuer Praxisimpuls: recherchiert, verständlich eingeordnet und direkt für deinen Betrieb nutzbar.</p>
 <div class="hero-actions"><a class="btn btn--white is-green-text" href="#beitraege">Beiträge entdecken</a></div>
 </div>
+<figure class="blog-hero-photo"><img src="assets/img/live/planning-landscape.webp" alt="Zwei Menschen besprechen einen Gartenplan auf einer Baustelle im Garten- und Landschaftsbau." width="1280" height="959" fetchpriority="high"/></figure>
 </div>
 </div>
 </section>
