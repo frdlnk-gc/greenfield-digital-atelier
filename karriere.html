@@ -179,14 +179,14 @@
 <h4>Sales Manager (m/w/d)</h4>
 <div class="tags"><span>Köln / Remote</span><span>Vollzeit</span><span>Vertrieb</span></div>
 </div>
-<a class="btn btn--outline js-apply" data-stelle="Sales Manager (m/w/d)" href="#bewerben">Jetzt bewerben<span class="arr">→</span></a>
+<a class="btn btn--outline" href="sales-manager.html">Jetzt bewerben<span class="arr">→</span></a>
 </div>
 <div class="job-card reveal" style="--d:.1s">
 <div>
 <h4>Projekt &amp; Marketing Manager (m/w/d)</h4>
 <div class="tags"><span>Köln / Remote</span><span>Vollzeit</span><span>Marketing</span></div>
 </div>
-<a class="btn btn--outline js-apply" data-stelle="Projekt &amp; Marketing Manager (m/w/d)" href="#bewerben">Jetzt bewerben<span class="arr">→</span></a>
+<a class="btn btn--outline" href="projekt-marketing-manager.html">Jetzt bewerben<span class="arr">→</span></a>
 </div>
 <div class="job-card reveal" style="--d:.0s">
 <div>
@@ -200,7 +200,7 @@
 <h4>Videograf &amp; Cutter (m/w/d)</h4>
 <div class="tags"><span>Köln / Remote</span><span>Vollzeit</span><span>Video</span></div>
 </div>
-<a class="btn btn--outline js-apply" data-stelle="Videograf &amp; Cutter (m/w/d)" href="#bewerben">Jetzt bewerben<span class="arr">→</span></a>
+<a class="btn btn--outline" href="videograf-cutter.html">Jetzt bewerben<span class="arr">→</span></a>
 </div>
 </div>
 </div>
@@ -210,9 +210,9 @@
 <div class="contact-split">
 <div class="reveal contact-intro">
 <div class="section-head">
-<span class="pill">Initiativbewerbung</span>
-<h2>Deine Rolle fehlt?<br/><span class="mark-u">Zeig uns dein Talent.</span></h2>
-<p class="sub">Du brennst für die grüne Branche und möchtest bei uns durchstarten? Dann zeig uns, wer du bist – wir freuen uns auf deine Bewerbung.</p>
+<span class="pill" id="application-kind">Initiativbewerbung</span>
+<h2 id="application-heading">Deine Rolle fehlt?<br/><span class="mark-u">Zeig uns dein Talent.</span></h2>
+<p class="sub" id="application-intro">Du brennst für die grüne Branche und möchtest bei uns durchstarten? Dann zeig uns, wer du bist – wir freuen uns auf deine Bewerbung.</p>
 </div>
 <div class="founder-strip">
 <img alt="Frederik Linke, Gründer und Geschäftsführer von Greenfield Digital" decoding="async" height="1400" src="assets/img/live/frederik.webp" width="933"/>
@@ -229,8 +229,17 @@
 <div class="contact-next"><h3>So lernen wir uns kennen</h3><ol><li><div><b>Du zeigst uns, was dich ausmacht.</b>Erzähl von deinen Stärken und den Aufgaben, für die du brennst.</div></li><li><div><b>Wir lernen uns kennen.</b>Im persönlichen Gespräch finden wir heraus, ob es für beide Seiten passt.</div></li><li><div><b>Du bekommst Klarheit.</b>Wir besprechen die Rolle und den nächsten Schritt mit dir.</div></li></ol><div class="contact-direct"><a href="tel:+4922195018825">+49 (0) 221 95 01 88 25</a><a href="mailto:hello@greenfield-digital.de">E-Mail schreiben ↗</a></div></div></div>
 <div class="contact-card card reveal" style="--d:.12s">
 <form data-endpoint="https://hook.eu1.make.com/wmkdkgrwjhk398vxmnmn8k2fd4ig7qcc" novalidate="">
-<input id="bw-stelle" name="stelle" type="hidden" value="Initiativbewerbung"/>
 <div class="form-grid">
+<div class="field full">
+<label for="bw-stelle">Deine Bewerbung als</label>
+<select id="bw-stelle" name="stelle" required>
+<option value="Initiativbewerbung">Initiativbewerbung</option>
+<option value="Sales Manager (m/w/d)" data-role="sales-manager" data-area="Vertrieb / Sales">Sales Manager (m/w/d)</option>
+<option value="Projekt &amp; Marketing Manager (m/w/d)" data-role="projekt-marketing-manager" data-area="Marketing">Projekt &amp; Marketing Manager (m/w/d)</option>
+<option value="Content &amp; Marketing Manager (m/w/d)" data-role="content-marketing-manager" data-area="Content">Content &amp; Marketing Manager (m/w/d)</option>
+<option value="Videograf &amp; Cutter (m/w/d)" data-role="videograf-cutter" data-area="Video &amp; Schnitt">Videograf &amp; Cutter (m/w/d)</option>
+</select>
+</div>
 <div class="field">
 <label for="bw-vorname">Vorname *</label>
 <input autocomplete="given-name" id="bw-vorname" name="vorname" placeholder="Max" required="" type="text"/>
@@ -353,14 +362,6 @@
 </div>
 <button aria-pressed="false" class="a-motion" type="button">Animationen pausieren Ⅱ</button></footer>
 <script defer="" src="assets/js/main.js?v=3"></script>
-<script>
-    /* "Jetzt bewerben" auf Job-Karten füllt das Stellen-Feld im Formular */
-    document.querySelectorAll('.js-apply').forEach(function (a) {
-      a.addEventListener('click', function () {
-        var f = document.getElementById('bw-stelle');
-        if (f) f.value = a.getAttribute('data-stelle');
-      });
-    });
-  </script>
+<script defer src="assets/js/careers.js?v=1"></script>
 <script defer="True" src="assets/js/atelier.js?v=4"></script><script defer="True" src="assets/js/refinement.js?v=2"></script><script defer="" src="assets/js/finish.js?v=7"></script><script defer src="assets/js/services.js?v=3"></script><script defer src="assets/js/launch.js?v=1"></script></body>
 </html>
