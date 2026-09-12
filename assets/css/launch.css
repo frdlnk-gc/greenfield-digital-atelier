@@ -110,3 +110,6 @@
 }
 @media(prefers-reduced-motion:reduce){.refined .refined-partner-float img{animation:none!important;}}
 .motion-paused .refined-partner-float img{animation-play-state:paused!important;}
+
+/* Alternate the desktop composition; retain the mobile reading order. */
+@media(min-width:821px){.refined .brand-principle>.growth-cycle{grid-column:1;grid-row:1;}.refined .brand-principle>.section-head{grid-column:2;grid-row:1;text-align:left;}.refined .brand-principle>.section-head h2,.refined .brand-principle>.section-head .sub{margin-left:0;margin-right:0;}}
