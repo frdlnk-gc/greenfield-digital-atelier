@@ -29,17 +29,29 @@
   });
   if($('.a-filter-count')) $('.a-filter-count').textContent=`${count} Projektbeispiele`;
  }));
- // Vimeo only loads in response to the explicitly labelled video button.
+ // Vimeo requires both consent and an explicit request to view a film.
  const dialog=$('.a-video-dialog'); let videoTrigger=null;
- $$('[data-video]').forEach(button=>button.addEventListener('click',()=>{
-  if(!dialog || !/^\d+$/.test(button.dataset.video))return;
-  videoTrigger=button; $('#video-title',dialog).textContent=button.dataset.title;
+ function renderInterview(){
+  if(!dialog||!videoTrigger)return;
+  const button=videoTrigger,player=$('.a-player',dialog);
+  if(!window.GreenfieldConsent?.allows('vimeo')){
+   player.replaceChildren();
+   if(window.GreenfieldConsent)window.GreenfieldConsent.showVimeoNotice(player);
+   else player.textContent='Der Film ist gesperrt. Bitte lade die Seite neu oder öffne das Interview direkt auf Vimeo.';
+   return;
+  }
   const iframe=document.createElement('iframe');
   iframe.title=`Kundeninterview: ${button.dataset.title}`;
   iframe.src=`https://player.vimeo.com/video/${button.dataset.video}?autoplay=1&dnt=1`;
   iframe.allow='autoplay; fullscreen; picture-in-picture'; iframe.allowFullscreen=true;
   iframe.referrerPolicy='strict-origin-when-cross-origin';
-  $('.a-player',dialog).replaceChildren(iframe);
+  player.replaceChildren(iframe);
+ }
+ document.addEventListener('gf:consentchange',()=>{if(dialog?.open)renderInterview();});
+ $$('[data-video]').forEach(button=>button.addEventListener('click',()=>{
+  if(!dialog || !/^\d+$/.test(button.dataset.video))return;
+  videoTrigger=button; $('#video-title',dialog).textContent=button.dataset.title;
+  renderInterview();
   $('.a-video-external',dialog).href=`https://vimeo.com/${button.dataset.video}`;
   dialog.showModal();document.documentElement.classList.add('video-open');
  }));
