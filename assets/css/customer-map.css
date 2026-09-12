@@ -47,7 +47,6 @@
  .customer-directory-list{max-height:270px;overflow:auto;overscroll-behavior:contain;}
  .customer-directory-list button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-bottom:1px solid var(--line);padding:12px 4px;background:white;text-align:left;color:var(--forest);font:600 .81rem/1.35 'DM Sans',sans-serif;cursor:pointer;}
  .customer-directory-list button:hover{background:var(--mint-soft);}.customer-directory-list small{display:block;margin-top:4px;font-size:.69rem;font-weight:400;color:var(--muted);}.customer-directory-list b{font-size:.7rem;color:var(--green-700);white-space:nowrap;}
- .customer-pin-cluster{width:31px;height:31px;border:2px solid white;background:var(--green-700);color:white;box-shadow:0 0 0 5px rgba(255,255,255,.25);font:700 .8rem 'DM Sans',sans-serif;}
  .customer-map-reset{background:transparent;color:var(--green-700);border:0;padding:12px 0 0;font:600 .75rem 'DM Sans',sans-serif;cursor:pointer;}
  .customer-map-panel{width:390px;max-width:100%;padding:18px;scroll-margin-top:95px;scroll-margin-bottom:20px;}
  .customer-film-filters{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 12px;}.customer-film-filters button{border:1px solid var(--line);border-radius:20px;padding:5px 10px;font:500 .68rem 'DM Sans',sans-serif;background:white;color:var(--forest);cursor:pointer;}.customer-film-filters button[aria-pressed=true]{background:var(--forest);color:white;}.customer-film-filters button[hidden]{display:none;}
