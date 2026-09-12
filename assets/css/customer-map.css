@@ -33,3 +33,26 @@
  .customer-map-caption{font-size:.67rem;color:var(--text);margin:13px 0 0;line-height:1.5;}
 }
 .recruiting-collection .media-note{font-size:.8rem;line-height:1.6;color:var(--muted);max-width:65ch;}
+/* The library keeps at most three preview videos mounted, whatever its size. */
+.customer-map-browser{display:none;}
+@media(min-width:1025px) and (hover:hover) and (pointer:fine){
+ .customer-map-browser{display:block;margin-top:18px;text-align:left;}
+ .customer-library-toggle{width:100%;display:flex;justify-content:space-between;gap:16px;align-items:center;border:1px solid var(--line);border-radius:16px;background:var(--mint-soft);color:var(--forest);padding:16px 18px;cursor:pointer;text-align:left;font:600 .85rem/1.4 'DM Sans',sans-serif;}
+ .customer-library-toggle>span:last-child{font-size:.72rem;color:var(--green-700);white-space:nowrap;}.customer-library-toggle b{font-size:1.2rem;margin-left:8px;}
+ .customer-map-directory{padding:18px;border:1px solid var(--line);border-radius:16px;margin-top:8px;background:white;}
+ .customer-map-directory[hidden],.customer-directory-list button[hidden],.customer-pin[hidden],.customer-map-reset[hidden]{display:none;}
+ .customer-map-search{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;}.customer-map-search label{font-size:.7rem;font-weight:600;}.customer-map-search label:first-child{grid-column:1;grid-row:1;}.customer-map-search label:nth-of-type(2){grid-column:2;grid-row:1;}
+ .customer-map-search input,.customer-map-search select{min-width:0;width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:white;color:var(--forest);font:400 .78rem 'DM Sans',sans-serif;}
+ [data-map-search-status]{font-size:.7rem;color:var(--muted);margin:12px 0 7px;}
+ .customer-directory-list{max-height:270px;overflow:auto;overscroll-behavior:contain;}
+ .customer-directory-list button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-bottom:1px solid var(--line);padding:12px 4px;background:white;text-align:left;color:var(--forest);font:600 .81rem/1.35 'DM Sans',sans-serif;cursor:pointer;}
+ .customer-directory-list button:hover{background:var(--mint-soft);}.customer-directory-list small{display:block;margin-top:4px;font-size:.69rem;font-weight:400;color:var(--muted);}.customer-directory-list b{font-size:.7rem;color:var(--green-700);white-space:nowrap;}
+ .customer-pin-cluster{width:31px;height:31px;border:2px solid white;background:var(--green-700);color:white;box-shadow:0 0 0 5px rgba(255,255,255,.25);font:700 .8rem 'DM Sans',sans-serif;}
+ .customer-map-reset{background:transparent;color:var(--green-700);border:0;padding:12px 0 0;font:600 .75rem 'DM Sans',sans-serif;cursor:pointer;}
+ .customer-map-panel{width:390px;max-width:100%;padding:18px;scroll-margin-top:95px;scroll-margin-bottom:20px;}
+ .customer-film-filters{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 12px;}.customer-film-filters button{border:1px solid var(--line);border-radius:20px;padding:5px 10px;font:500 .68rem 'DM Sans',sans-serif;background:white;color:var(--forest);cursor:pointer;}.customer-film-filters button[aria-pressed=true]{background:var(--forest);color:white;}.customer-film-filters button[hidden]{display:none;}
+ .customer-film-pagination{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px;}.customer-film-pagination span{font-size:.72rem;color:var(--muted);}.customer-film-pagination button{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:white;color:var(--green-700);cursor:pointer;}.customer-film-pagination button:disabled{opacity:.3;cursor:default;}
+ .customer-film-jump{display:block;color:var(--muted);font-size:.65rem;margin-top:10px;}.customer-film-jump[hidden]{display:none;}.customer-film-jump select{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px;font:400 .71rem 'DM Sans',sans-serif;background:white;color:var(--forest);margin-top:4px;}
+ .customer-map-film video{max-height:168px;}.customer-map-film [data-map-film-title]{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em;}.customer-map-film.is-landscape video{aspect-ratio:9/16;object-fit:contain;}
+ .customer-map-browser :focus-visible,.customer-map-panel :focus-visible{outline:2px solid var(--green-700);outline-offset:3px;}
+}
