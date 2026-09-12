@@ -11,11 +11,20 @@
    if(canMove() && candidates.includes(v)) {
     if(!v.getAttribute('src')) {v.src=v.dataset.preview;v.muted=true;}
     if(v.paused)v.play().catch(()=>{});
-   } else v.pause();
+   } else {
+    v.pause();
+    // Large film libraries retain only the visible video previews in memory.
+    if(v.hasAttribute('data-release-preview') && v.getAttribute('src') && !candidates.includes(v)) {v.removeAttribute('src');v.load();}
+   }
   });
  };
  const observer = new IntersectionObserver(entries => {entries.forEach(e=>visible.set(e.target,e.intersectionRatio));syncVideo();},{threshold:[0,.015,.1,.5,1]});
  previews.forEach(v=>observer.observe(v));
+ // Load archive covers shortly before they enter the visible rail, not all at page load.
+ const covers = new IntersectionObserver(entries => entries.forEach(e => {
+  if(e.isIntersecting) {e.target.poster=e.target.dataset.lazyPoster;covers.unobserve(e.target);}
+ }),{rootMargin:'200px',threshold:0});
+ document.querySelectorAll('video[data-lazy-poster]').forEach(v=>covers.observe(v));
  document.addEventListener('visibilitychange',syncVideo);
  document.addEventListener('greenfield:mediachange',syncVideo);
  reduced.addEventListener('change',syncVideo);
