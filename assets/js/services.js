@@ -27,17 +27,18 @@
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  document.querySelectorAll('.service-trust--flow').forEach(rail=>{
   const viewport=rail.querySelector('.client-window'),group=rail.querySelector('.client-group'),button=rail.querySelector('.client-motion');
-  let paused=false,hover=false,touch=false,visible=false,last=0;
+  let paused=false,touch=false,visible=false,last=0,position=viewport.scrollLeft,resumeAt=0;
   const label=()=>{button.setAttribute('aria-pressed',String(paused));button.innerHTML=paused?'Logos abspielen <span aria-hidden="true">▶</span>':'Logos pausieren <span aria-hidden="true">Ⅱ</span>';};
   const pause=()=>{paused=true;label();};
   button.addEventListener('click',()=>{paused=!paused;label();});
-  viewport.addEventListener('mouseenter',()=>hover=true);viewport.addEventListener('mouseleave',()=>hover=false);
-  viewport.addEventListener('pointerdown',()=>{touch=true;pause();});
-  viewport.addEventListener('pointerup',()=>touch=false);viewport.addEventListener('pointercancel',()=>touch=false);
+  viewport.addEventListener('pointerdown',()=>{touch=true;});
+  const release=()=>{if(touch){touch=false;resumeAt=performance.now()+1400;}};
+  window.addEventListener('pointerup',release);window.addEventListener('pointercancel',release);
+  viewport.addEventListener('wheel',()=>{resumeAt=performance.now()+1400;},{passive:true});
   viewport.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home'].includes(e.key)){e.preventDefault();pause();if(e.key==='Home')viewport.scrollTo({left:0,behavior:'smooth'});else viewport.scrollBy({left:(e.key==='ArrowRight'?1:-1)*183,behavior:'smooth'});}});
-  rail.querySelectorAll('.client-logo').forEach(el=>{el.addEventListener('pointerdown',()=>el.classList.add('is-color'));el.addEventListener('pointerleave',()=>el.classList.remove('is-color'));});
   new IntersectionObserver(e=>visible=e[0].isIntersecting,{threshold:.05}).observe(rail);
-  function frame(t){const dt=Math.min(t-last,60);last=t;if(visible&&!paused&&!hover&&!touch&&!reduced.matches&&!document.hidden&&!document.body.classList.contains('motion-paused')&&document.activeElement!==viewport){viewport.scrollLeft+=dt*.038;if(viewport.scrollLeft>=group.offsetWidth)viewport.scrollLeft-=group.offsetWidth;}requestAnimationFrame(frame);}
+  // Preserve fractional pixels: repeated rounded scrollLeft increments can stall at high refresh rates.
+  function frame(t){const dt=Math.min(t-last,60);last=t;if(visible&&!paused&&!touch&&t>resumeAt&&!reduced.matches&&!document.hidden&&!document.body.classList.contains('motion-paused')){position+=dt*.042;if(position>=group.offsetWidth)position-=group.offsetWidth;viewport.scrollLeft=position;}else{position=viewport.scrollLeft;}requestAnimationFrame(frame);}
   requestAnimationFrame(frame);
  });
 })();
