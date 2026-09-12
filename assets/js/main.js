@@ -155,6 +155,7 @@
     !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (fineMotion) {
     document.querySelectorAll('.map-visual').forEach(function (vis) {
+      if (vis.classList.contains('customer-map')) return;
       var tilt = document.createElement('div');
       tilt.className = 'map-tilt';
       while (vis.firstChild) tilt.appendChild(vis.firstChild);
