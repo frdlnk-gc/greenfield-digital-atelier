@@ -14,8 +14,8 @@
  const stage=document.querySelector('[data-challenge-stage]');
  const challenges={
   visibility:{title:'Deine Qualität bekommt eine Bühne.',copy:'Wir machen aus deinen Projekten und deinem Wissen regelmäßige Einblicke. Damit deine Region sieht, was in deinem Betrieb steckt.',photo:'assets/img/productions/schwingel-pool.webp',alt:'Gartengestaltung Schwingel beim Bau eines Pools'},
-  team:{title:'Lass dein Team für deinen Betrieb sprechen.',copy:'Echte Einblicke zeigen mehr als eine Stellenanzeige: die Menschen, den Umgang miteinander und die Arbeit, auf die ihr stolz seid.',photo:'assets/img/live/team-landscape.webp',alt:'Mitarbeiter im Garten- und Landschaftsbau im Gespräch'},
-  time:{title:'Ein Drehtag. Ein klarer Plan. Regelmäßig sichtbar.',copy:'Wir planen Themen, produzieren bei dir vor Ort und kümmern uns um die Veröffentlichung. Du bringst deinen Betrieb ein. Wir halten den Auftritt am Laufen.',photo:'assets/img/productions/scheidtmann-team.webp',alt:'Florian Scheidtmann und ein Mitarbeiter auf einer Baustelle'}
+  team:{title:'Lass dein Team für deinen Betrieb sprechen.',copy:'Echte Einblicke zeigen mehr als eine Stellenanzeige: die Menschen, den Umgang miteinander und die Arbeit, auf die ihr stolz seid.',photo:'assets/img/productions/scheidtmann-team.webp',alt:'Zwei Mitarbeiter von Scheidtmann gemeinsam auf einer Baustelle'},
+  time:{title:'Ein Drehtag. Ein klarer Plan. Regelmäßig sichtbar.',copy:'Wir planen Themen, produzieren bei dir vor Ort und kümmern uns um die Veröffentlichung. Du bringst deinen Betrieb ein. Wir halten den Auftritt am Laufen.',photo:'assets/img/productions/woerlein-plants.webp',alt:'Mitarbeiter der Baumschule Wörlein bei der Arbeit mit Gehölzen'}
  };
  stage?.querySelectorAll('[data-challenge]').forEach(button=>button.addEventListener('click',()=>{
   const view=challenges[button.dataset.challenge];
