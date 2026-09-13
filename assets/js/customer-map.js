@@ -66,45 +66,19 @@
   pins.forEach(p=>p.setAttribute('aria-expanded',String(p.dataset.customer===id)));panel.hidden=false;renderFilms();if(focus)slots[0].focus({preventScroll:true});
  };
  const toggleDirectory=show=>{directory.hidden=!show;browse.setAttribute('aria-expanded',String(show));browse.querySelector('b').textContent=show?'−':'+';};
- // Spread only the drawn targets; the stored geographic coordinates stay unchanged.
- function spreadPins(customers,width,height){
-  const gap=Math.max(24,Math.min(28,width/23.5)),svg=canvas.querySelector('.dach-map');
-  const paths=[...svg.querySelectorAll('path')],box=svg.viewBox.baseVal;
-  const countries={Schweiz:'CH',Deutschland:'DE','Österreich':'AT'};
-  const countryAt=(x,y)=>countries[paths.find(path=>path.isPointInFill({x:x/width*box.width,y:y/height*box.height}))?.querySelector('title')?.textContent];
-  const inside=(x,y)=>!!countryAt(x,y);
-  const inset=(x,y)=>inside(x,y)&&inside(x-3,y)&&inside(x+3,y)&&inside(x,y-3)&&inside(x,y+3);
-  const candidates=[];
-  for(let row=0,y=gap/2;y<height;y+=gap*Math.sqrt(3)/2,row++){
-   for(let x=gap/2+(row%2)*gap/2;x<width;x+=gap){if(inset(x,y))candidates.push({x,y,country:countryAt(x,y)});}
-  }
-  const anchors=customers.map(c=>({id:c.id,country:c.country,x:c.x*width/100,y:c.y*height/100}));
-  const crowded=anchors.map(a=>({...a,neighbors:anchors.filter(b=>Math.hypot(a.x-b.x,a.y-b.y)<gap*3).length})).sort((a,b)=>b.neighbors-a.neighbors||a.id.localeCompare(b.id));
-  const placed=[],available=p=>placed.every(q=>Math.hypot(p.x-q.x,p.y-q.y)>=gap-.1);
-  for(const anchor of crowded){
-   const options=countryAt(anchor.x,anchor.y)===anchor.country&&inset(anchor.x,anchor.y)&&available(anchor)?[anchor]:candidates.filter(p=>p.country===anchor.country&&available(p));
-   options.sort((a,b)=>Math.hypot(a.x-anchor.x,a.y-anchor.y)-Math.hypot(b.x-anchor.x,b.y-anchor.y));
-   const target=options[0]||anchor;
-   placed.push({id:anchor.id,country:anchor.country,x:target.x,y:target.y,anchorX:anchor.x,anchorY:anchor.y});
-  }
-  // Improve the assignment without changing spacing or moving a customer into another country.
-  const cost=(a,p)=>(a.anchorX-p.x)**2+(a.anchorY-p.y)**2;
-  for(let pass=0;pass<20;pass++){
-   let changed=false;
-   for(let i=0;i<placed.length;i++)for(let j=i+1;j<placed.length;j++){
-    const a=placed[i],b=placed[j];if(a.country!==b.country)continue;
-    if(cost(a,b)+cost(b,a)+.1<cost(a,a)+cost(b,b)){[a.x,b.x]=[b.x,a.x];[a.y,b.y]=[b.y,a.y];changed=true;}
-   }
-   if(!changed)break;
-  }
-  return placed;
- }
  const layoutPins=()=>{
   pins.forEach(p=>p.hidden=!filtered.some(c=>c.id===p.dataset.customer));
   if(!desktop.matches||!canvas.clientWidth||!canvas.clientHeight)return;
   // Always lay out the complete set so searching never shifts the remaining pins.
-  pinPositions=spreadPins(data,canvas.clientWidth,canvas.clientHeight);
-  for(const p of pinPositions){const pin=pins.find(pin=>pin.dataset.customer===p.id);pin.style.left=`${p.x}px`;pin.style.top=`${p.y}px`;}
+  const bounds=canvas.getBoundingClientRect();
+  pinPositions=data.map(c=>({id:c.id,left:c.displayX,top:c.displayY,x:c.displayX*bounds.width/100,y:c.displayY*bounds.height/100}));
+  for(const p of pinPositions){
+   const pin=pins.find(pin=>pin.dataset.customer===p.id);
+   pin.style.left=`${p.left}%`;pin.style.top=`${p.top}%`;
+   const nearest=Math.min(...pinPositions.filter(q=>q.id!==p.id).map(q=>Math.hypot(q.x-p.x,q.y-p.y)));
+   pin.style.width=pin.style.height=`${Math.min(24,nearest*1.8)}px`;
+   pin.style.setProperty('--pin-dot-size',`${Math.min(11,nearest*.8)}px`);
+  }
   position();
  };
  const filter=()=>{const terms=normalize(search.value.trim()).split(/\s+/).filter(Boolean);filtered=data.filter(c=>(!sector.value||c.category===sector.value)&&terms.every(t=>normalize(`${c.name} ${c.city} ${c.category}`).includes(t)));
