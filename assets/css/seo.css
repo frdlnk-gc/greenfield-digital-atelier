@@ -49,3 +49,32 @@
 .seo-footer-sectors a{display:inline-block;margin:0 14px 6px 0}
 @media(max-width:900px){.industry-hero-grid,.industry-context,.industry-faq{grid-template-columns:1fr}.industry-hero img{aspect-ratio:16/10}.industry-priorities{gap:24px}.industry-consult{flex-direction:column;align-items:start}}
 @media(max-width:640px){.industry-hero{padding-top:calc(var(--nav-h) + 20px)}.industry-priorities,.seo-reading-links{grid-template-columns:1fr}.industry-films{gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.industry-films h3{font-size:.875rem}.industry-films .reel-play{right:8px;bottom:8px;width:30px;height:30px}.industry-films p{font-size:.8125rem}.industry-consult{padding:28px 24px}.seo-reading{padding:32px 0}}
+/* Compact industry entries and verifiable examples from the existing client record. */
+.seo-industry-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.seo-industry-cards a{display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--mint-soft);color:var(--ink)}
+.seo-industry-cards strong{font-size:1.1rem;line-height:1.35}
+.seo-industry-cards span{font-size:.9375rem;line-height:1.55}
+.seo-industry-cards a:hover,.seo-industry-cards a:focus-visible{border-color:var(--green)}
+.industry-roles{margin-top:32px}.industry-roles h3{font-size:1rem;margin:0 0 14px}
+.industry-roles ul{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.industry-roles li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:.9375rem;background:white}
+.seo-result-excerpt{max-width:880px;margin:36px auto;padding:28px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--mint-soft)}
+.seo-result-excerpt h3{font-size:1.3rem;margin:18px 0}.seo-result-excerpt ul{padding-left:20px;line-height:1.8}.seo-result-excerpt p{font-size:.875rem;margin:16px 0;color:var(--muted)}
+.editorial-copy .seo-result-excerpt{margin:40px 0}.editorial-industry{font-size:.9rem;margin-top:14px}.editorial-industry a{color:var(--viridian);text-underline-offset:4px}
+.result-card[id]{scroll-margin-top:100px}
+@media(max-width:1000px){.seo-industry-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.seo-industry-cards{grid-template-columns:1fr}.seo-industry-cards a{padding:20px}.seo-result-excerpt{padding:22px}}
+
+.industry-context p+p{margin-top:16px}
+/* Heading levels change semantics, not the established card typography. */
+.refined h3.seo-small-heading{font-size:1rem;line-height:1.12}
+.refined .step-card h3.seo-small-heading{font-size:1.12rem;margin-bottom:8px}
+.refined .job-card h3.seo-small-heading{font-size:1.2rem;margin-bottom:16px;min-height:2.6em}
+.refined .tp-list h3.seo-small-heading,.refined .process-list h3.seo-small-heading{margin-bottom:4px}
+.refined .refined-growth-steps h3.seo-small-heading{margin-bottom:5px}
+.refined .sd-block h3.seo-small-heading{margin-bottom:6px}.refined .sd-cols h3.seo-small-heading{margin-bottom:12px}
+.refined .ph-col.is-highlight h3.seo-small-heading{color:white}
+.refined .side-card h2{font-weight:700}
+.refined .hero-reels .production-reel p.seo-hero-client{color:white;font-size:.8rem;line-height:1.12;font-weight:700;letter-spacing:-.02em;margin:14px 0 0;text-align:center}
+@media(max-width:700px){.refined .job-card h3.seo-small-heading{min-height:0}}
+.refined .brand-audience-copy p.seo-brand-title{font-size:1.2rem;font-weight:700;line-height:1.3;letter-spacing:-.02em;color:var(--ink);margin:9px 0}
