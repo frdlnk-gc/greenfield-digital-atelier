@@ -32,6 +32,18 @@
   var burger = document.getElementById('burger');
   var navLinks = document.getElementById('navLinks');
   if (burger && navLinks) {
+    var instagram = document.querySelector('.site-footer .footer-instagram');
+    if (instagram) {
+      var social = document.createElement('li');
+      social.className = 'nav-panel-instagram';
+      var socialLink = instagram.cloneNode(true);
+      socialLink.className = 'nav-instagram-link';
+      var account = document.createElement('small');
+      account.textContent = '@greenfield_digital';
+      socialLink.querySelector('span').appendChild(account);
+      social.appendChild(socialLink);
+      navLinks.appendChild(social);
+    }
     /* Abschluss-Bereich des Panels: CTA + direkte Kontaktwege */
     var foot = document.createElement('li');
     foot.className = 'nav-panel-foot';
