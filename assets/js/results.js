@@ -29,5 +29,13 @@
   if (cards.indexOf(document.activeElement) >= limit()) expanded = true;
   render();
  });
+ function revealLinkedResult(){
+  const target=cards.find(card=>'#'+card.id===location.hash);
+  if(!target)return;
+  if(cards.indexOf(target)>=limit()){expanded=true;render();}
+  requestAnimationFrame(()=>target.scrollIntoView({block:'center'}));
+ }
+ window.addEventListener('hashchange',revealLinkedResult);
  render();
+ revealLinkedResult();
 })();
