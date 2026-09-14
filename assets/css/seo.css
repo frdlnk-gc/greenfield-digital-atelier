@@ -1,0 +1,51 @@
+/* Editorial additions use the existing Greenfield design tokens. */
+.refined :is(.hero-main,.hero-card,.service-hero-copy).reveal{opacity:1;visibility:visible;transform:none}
+.refined :is(.hero-content,.hero-inner)>*{animation:none}
+.industry-breadcrumb{display:flex;flex-wrap:wrap;gap:.6rem;font-size:.875rem;margin:0 0 1.5rem;color:var(--muted)}
+.industry-breadcrumb a{color:var(--viridian,var(--green))}
+.industry-hero{padding:calc(var(--nav-h) + 32px) 0 56px}
+.industry-hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,64px);align-items:center}
+.industry-hero h1{font-size:clamp(2.2rem,3.4vw,3.5rem);line-height:1.1;letter-spacing:-.04em;margin:24px 0}
+.industry-hero h1 span{color:var(--green)}
+.industry-hero .sub{max-width:38rem;font-size:1.0625rem}
+.industry-hero figure{margin:0;min-width:0}
+.industry-hero img{width:100%;aspect-ratio:5/4;height:auto;object-fit:cover;border-radius:var(--r-lg)}
+.industry-hero figcaption{font-size:.8125rem;color:var(--muted);margin-top:.65rem}
+.industry-hero .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.industry-context{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(24px,5vw,80px);align-items:start}
+.industry-context h2{margin:0;font-size:clamp(1.7rem,2.5vw,2.5rem)}
+.industry-context p{margin:0;font-size:1.0625rem}
+.industry-priorities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:48px}
+.industry-priority{border-top:2px solid var(--green);padding-top:24px;display:flex;flex-direction:column;align-items:start;gap:16px}
+.industry-priority h3{font-size:1.3rem;line-height:1.3;margin:0}
+.industry-priority p{margin:0}
+.industry-priority a{margin-top:auto}
+.industry-films{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:880px;margin:32px auto}
+.industry-films .reel-screen{width:100%;aspect-ratio:9/13;display:block;position:relative;overflow:hidden;border:0;border-radius:var(--r-lg);padding:0;background:var(--ink)}
+.industry-films img{width:100%;height:100%;object-fit:cover;display:block}
+.industry-films .reel-play{position:absolute;right:16px;bottom:16px;border:1px solid white;color:white;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;background:var(--ink)}
+.industry-films h3{font-size:1rem;margin:14px 0 4px}
+.industry-films p{font-size:.875rem;margin:0}
+.industry-proof-link{text-align:center}
+.industry-faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,80px)}
+.industry-faq details{border-top:1px solid var(--line);padding:20px 0}
+.industry-faq details:last-child{border-bottom:1px solid var(--line)}
+.industry-faq summary{font-size:1.0625rem;font-weight:600;cursor:pointer}
+.industry-faq details p{margin:16px 0 0}
+.industry-consult{padding:40px;background:var(--ink);color:white;border-radius:var(--r-lg);display:flex;justify-content:space-between;gap:32px;align-items:center}
+.industry-consult h2{color:white;font-size:clamp(1.6rem,2.7vw,2.4rem);margin:0 0 12px}
+.industry-consult p{max-width:42rem;color:inherit;margin:0}
+.industry-consult a{flex-shrink:0}
+.seo-reading{padding:48px 0}
+.seo-reading-inner{border-top:1px solid var(--line);padding-top:28px}
+.seo-reading h2{font-size:1.4rem;margin:0 0 22px}
+.seo-reading-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.seo-reading-links a{display:flex;flex-direction:column;gap:8px;color:var(--ink);padding-right:20px}
+.seo-reading-links span{color:var(--muted);font-size:.875rem}
+.seo-reading-links strong{font-size:1rem;line-height:1.5}
+.seo-sectors{display:flex;flex-wrap:wrap;gap:12px 24px;margin:24px 0 0;font-size:.9375rem;align-items:center}
+.seo-sectors a{color:var(--viridian,var(--green));text-decoration:underline;text-underline-offset:4px}
+.seo-footer-sectors{margin-top:20px;font-size:.875rem}
+.seo-footer-sectors a{display:inline-block;margin:0 14px 6px 0}
+@media(max-width:900px){.industry-hero-grid,.industry-context,.industry-faq{grid-template-columns:1fr}.industry-hero img{aspect-ratio:16/10}.industry-priorities{gap:24px}.industry-consult{flex-direction:column;align-items:start}}
+@media(max-width:640px){.industry-hero{padding-top:calc(var(--nav-h) + 20px)}.industry-priorities,.seo-reading-links{grid-template-columns:1fr}.industry-films{gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}.industry-films h3{font-size:.875rem}.industry-films .reel-play{right:8px;bottom:8px;width:30px;height:30px}.industry-films p{font-size:.8125rem}.industry-consult{padding:28px 24px}.seo-reading{padding:32px 0}}
