@@ -24,6 +24,7 @@
     .hero-content .sub { animation-delay: .42s; }
     .hero-content .hero-btns { animation-delay: .58s; }
     .hero-content .hero-trust { animation-delay: .74s; }
+    .hero-content .hero-google-rating { animation-delay: .86s; }
     @keyframes hero-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
     .hero-content .mark-u svg path { stroke: var(--green-bright); }
     .hero-trust { justify-content: flex-start; margin-top: 24px; color: #fff; font-size: .92rem; gap: 8px 22px; }
@@ -73,6 +74,23 @@
     }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
     .hero-btns .btn { padding: 14px 20px; font-size: .96rem; }
+
+    .hero-google-rating {
+      position: absolute; bottom: 48px;
+      display: flex; align-items: center; gap: 16px;
+      width: max-content; max-width: 100%; padding: 15px 19px;
+      border: 1px solid rgba(255,255,255,.24); border-radius: 16px;
+      background: rgba(6,33,26,.76); color: var(--white);
+    }
+    .hero-google-score { display: flex; align-items: baseline; gap: 4px; }
+    .hero-google-score strong { font-size: 2.45rem; font-weight: 650; letter-spacing: -.055em; line-height: 1; }
+    .hero-google-score small { font-size: .8rem; color: rgba(255,255,255,.76); }
+    .hero-google-stars { display: flex; gap: 3px; color: var(--green-bright); margin-bottom: 5px; }
+    .hero-google-stars svg { width: 17px; height: 17px; fill: currentColor; }
+    .hero-google-label { display: block; font-size: .78rem; line-height: 1.3; font-weight: 550; }
+    @media(max-width:1280px) {
+      .hero-google-rating { position: static; margin-top: 28px; }
+    }
 
     /* schwebende Partner-Karte */
     .partner-card {
@@ -441,6 +459,10 @@
 <span>700+ Partnerbetriebe</span>
 <span>Marke · Menschen · Wachstum</span>
 <span>Im gesamten DACH-Raum</span>
+</div>
+<div class="hero-google-rating" role="img" aria-label="Google-Bewertungen: 4,9 von 5 Sternen">
+<div class="hero-google-score" aria-hidden="true"><strong>4,9</strong><small>/ 5</small></div>
+<div aria-hidden="true"><div class="hero-google-stars"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9Z"/></svg></div><span class="hero-google-label">Google-Bewertungen</span></div>
 </div>
 </div>
 <div class="partner-card">
