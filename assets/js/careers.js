@@ -22,6 +22,26 @@
     }
   }
   const slug = new URLSearchParams(location.search).get('stelle');
+  const closedRoles = {
+    'videograf-cutter': 'Videograf & Cutter (m/w/d)',
+    'videograf': 'Videograf & Cutter (m/w/d)',
+    'projekt-marketing-manager': 'Projekt & Marketing Manager (m/w/d)',
+    'projekt-und-marketingmanager': 'Projekt & Marketing Manager (m/w/d)'
+  };
+  // Old application URLs must not silently become an unsolicited application.
+  if (Object.hasOwn(closedRoles, slug)) {
+    kind.textContent = 'Aktuell keine offene Stelle';
+    heading.textContent = closedRoles[slug];
+    intro.textContent = 'Diese Position ist aktuell nicht zu besetzen. Wir nehmen für diese Rolle derzeit keine Bewerbungen entgegen.';
+    role.closest('form').hidden = true;
+    const notice = document.getElementById('application-availability');
+    notice.textContent = 'Sales Manager und Content & Marketing Manager sind weiterhin offen. ';
+    const link = document.createElement('a');
+    link.href = '#stellen';
+    link.textContent = 'Offene Stellen ansehen →';
+    notice.append(link);
+    return;
+  }
   const match = Array.from(role.options).find(option => option.dataset.role && option.dataset.role === slug);
   if (match) role.value = match.value;
   render(Boolean(match));
