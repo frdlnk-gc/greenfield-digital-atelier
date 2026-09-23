@@ -19,4 +19,4 @@ jobs:
       - run: python3 scripts/sync_blog.py --check
       - run: python3 scripts/seo_check.py --freshness
       - if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: python3 scripts/seo_check.py --live --freshness
+        run: python3 scripts/seo_check.py --live --freshness --weekly-due

@@ -37,4 +37,4 @@ git diff --check
 
 ## Unabhängige Kontrolle
 
-`Website SEO and publishing health` läuft für Pull Requests und `main`, zusätzlich dienstags um 11:00 UTC sowie manuell. Der geplante Lauf prüft auch die Live-Website und erkennt ausbleibende Veröffentlichungen. Er schreibt keine Artikel und ersetzt nicht den montäglichen Redaktionslauf.
+`Website SEO and publishing health` läuft für Pull Requests und `main`, zusätzlich dienstags um 11:00 UTC sowie manuell. Der geplante Lauf prüft auch die Live-Website und verlangt ab Dienstag eine Veröffentlichung aus der laufenden ISO-Kalenderwoche (`--weekly-due`). Dadurch fällt bereits eine ausgelassene Montagsausgabe auf. Er schreibt keine Artikel und ersetzt nicht den montäglichen Redaktionslauf.

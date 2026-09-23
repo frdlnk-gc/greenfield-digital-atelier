@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit, unquote
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://www.greenfield-digital.de/'
 NS = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
@@ -31,7 +32,7 @@ def read(path, live=False):
         if r.status!=200: raise ValueError(f'HTTP {r.status}: {path}')
         return r.read().decode()
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--live',action='store_true'); ap.add_argument('--freshness',action='store_true'); args=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--live',action='store_true'); ap.add_argument('--freshness',action='store_true'); ap.add_argument('--weekly-due',action='store_true'); args=ap.parse_args()
     errors=[]; pages={}; titles={}; descriptions={}
     tracked=set(subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard'],cwd=ROOT,text=True).splitlines())
     tree=ET.fromstring(read('sitemap.xml',args.live)); urls=[n.text for n in tree.findall('s:url/s:loc',NS)]
@@ -90,9 +91,11 @@ def main():
     errors.extend(f'Multiple weekly articles in {week}' for week,count in weeks.items() if count>1)
     for entry in publications:
         if BASE+entry['path'] not in pages: errors.append(f'Article absent from sitemap: {entry["path"]}')
-    if args.freshness:
+    if args.freshness or args.weekly_due:
+        today=dt.datetime.now(ZoneInfo("Europe/Berlin")).date()
         latest=max(dt.date.fromisoformat(p['datePublished']) for p in publications if p['publicationKind']=='weekly')
-        age=(dt.date.today()-latest).days
+        age=(today-latest).days
+        if args.weekly_due and today.weekday()>=1 and latest.isocalendar()[:2]!=today.isocalendar()[:2]: errors.append(f"This week has no published weekly article: latest {latest}")
         if age>9: errors.append(f'Weekly publishing stale: latest {latest} ({age} days ago)')
     rss=ET.fromstring(read('feed.xml',args.live))
     if len(rss.findall('channel/item'))!=len(publications): errors.append('Feed/article count mismatch')
