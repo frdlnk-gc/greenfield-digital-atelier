@@ -32,3 +32,7 @@
 .blog-clusters a:hover,.blog-clusters a:focus-visible{border-color:var(--green)}.blog-clusters strong{font-size:1rem}.blog-clusters span{font-size:.875rem;line-height:1.5;color:var(--muted)}
 @media(max-width:900px){.blog-clusters>div{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.blog-clusters>div{grid-template-columns:1fr}.blog-clusters a{padding:16px}}
+/* Practical worksheets remain readable on narrow screens and when copied. */
+.editorial-prompt{padding:24px;background:var(--mint-soft);border:1px solid var(--line);border-radius:20px;overflow-wrap:anywhere}
+.editorial-prompt p:last-child{margin-bottom:0}
+.editorial-photo-caption{font-size:.8125rem;line-height:1.5;color:var(--muted);padding-top:12px;max-width:60rem}
