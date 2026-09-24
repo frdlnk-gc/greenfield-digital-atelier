@@ -9,6 +9,8 @@ from concurrent.futures import ThreadPoolExecutor
 import re
 import subprocess
 import sys
+import time
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from urllib.parse import urldefrag
 import xml.etree.ElementTree as ET
@@ -78,10 +80,21 @@ def main():
             return local_text(path), ''
         # Use the public directory URL for a legacy index file.
         url = BASE + path.removesuffix('index.html') if path.endswith('/index.html') else BASE + path
-        with urlopen(Request(url, headers={'User-Agent': 'Greenfield-SEO-Check/1.0'}), timeout=30) as response:
-            if response.status != 200:
-                raise ValueError(f'HTTP {response.status}')
-            return response.read().decode(), ', '.join(response.headers.get_all('X-Robots-Tag', []))
+        for attempt in range(3):
+            try:
+                with urlopen(Request(url, headers={'User-Agent': 'Greenfield-SEO-Check/1.0'}), timeout=30) as response:
+                    if response.status != 200:
+                        raise ValueError(f'HTTP {response.status}')
+                    return response.read().decode(), ', '.join(response.headers.get_all('X-Robots-Tag', []))
+            except HTTPError as error:
+                if error.code not in (429, 500, 502, 503, 504) or attempt == 2:
+                    raise
+            except (URLError, TimeoutError, ConnectionError):
+                if attempt == 2:
+                    raise
+            # Brief CDN/network failures must not create false weekly alerts.
+            # Content/indexing errors are never retried or suppressed.
+            time.sleep(2 ** attempt)
 
     sitemap = {node.text for node in ET.fromstring(read('sitemap.xml')[0]).findall('s:url/s:loc', NS)}
 
