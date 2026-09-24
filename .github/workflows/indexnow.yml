@@ -1,0 +1,38 @@
+name: Notify search engines after publication
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      initial_submission:
+        description: Submit the complete sitemap once (otherwise only the last deployment changes)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: false
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Notify only verified production URLs
+        env:
+          INITIAL: ${{ inputs.initial_submission }}
+        run: |
+          if [ "$INITIAL" = "true" ]; then
+            python3 scripts/notify_indexnow.py --all --submit
+          else
+            python3 scripts/notify_indexnow.py --since HEAD^1 --submit
+          fi
