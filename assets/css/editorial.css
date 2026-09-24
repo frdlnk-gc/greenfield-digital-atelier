@@ -36,3 +36,6 @@
 .editorial-prompt{padding:24px;background:var(--mint-soft);border:1px solid var(--line);border-radius:20px;overflow-wrap:anywhere}
 .editorial-prompt p:last-child{margin-bottom:0}
 .editorial-photo-caption{font-size:.8125rem;line-height:1.5;color:var(--muted);padding-top:12px;max-width:60rem}
+/* Download actions stay readable and wrap on small screens. */
+.page-editorial .editorial-copy .editorial-answer a.btn--primary{background:#007b5d;color:#fff;text-decoration:none;white-space:normal;text-align:left;line-height:1.5;max-width:100%}
+.page-editorial .editorial-copy .editorial-answer a.btn--primary:hover{background:#005e47;color:#fff}
