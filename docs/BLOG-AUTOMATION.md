@@ -21,6 +21,7 @@ Dieser Auftrag ist ausschließlich die wöchentliche Redaktion. Ältere Landingp
 python3 scripts/sync_blog.py
 python3 scripts/sync_blog.py --check
 python3 scripts/seo_check.py --freshness
+python3 scripts/check_indexing.py
 git diff --check
 ```
 
@@ -30,7 +31,7 @@ git diff --check
 
 1. Nur relevante Dateien committen, Branch pushen, Pull Request mit konkreter Änderung und Prüfnachweisen erstellen. Im Codex-Auftrag verlinken/anhängen.
 2. Erfolgreiche Qualitätsprüfung abwarten, PR mergen. GitHub-Pages-Deployment für den **Merge-Commit** abwarten.
-3. Danach `python3 scripts/seo_check.py --live --freshness` ausführen. Artikel, Canonical, Blogübersicht, Feed und Sitemap müssen öffentlich den neuen Stand liefern. Lokaler Test, Push oder Merge allein sind kein Veröffentlichungsnachweis.
+3. Danach `python3 scripts/seo_check.py --live --freshness` und `python3 scripts/check_indexing.py --live` ausführen. Artikel, Canonical, Blogübersicht, Feed und Sitemap müssen öffentlich den neuen Stand liefern. Lokaler Test, Push oder Merge allein sind kein Veröffentlichungsnachweis.
 4. Der Lauf ist erst erledigt, wenn die öffentliche URL geprüft ist. Bei Fehlern gezielt reparieren; einen unveröffentlichten Entwurf als solchen benennen. Keine andere Aufgabe als Ersatzabschluss verwenden.
 5. Die private Sites-Vorschau kann danach separat synchronisiert werden, wenn deren aktueller Zugang verfügbar ist. Keine veralteten Vollseitenexporte auf die Produktion übertragen. Vorschau bleibt privat und `noindex`; ihr Fehlschlag darf den öffentlichen Artikel nicht blockieren. Ergebnisse getrennt nennen.
 6. Nur eine bestätigte neue Veröffentlichung mit Link oder einen konkreten nicht selbst behebbaren Fehler melden. Ohne Änderung still bleiben. Keine Slack-Nachrichten.

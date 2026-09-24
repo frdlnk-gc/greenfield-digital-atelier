@@ -63,7 +63,7 @@ def main():
     ET.indent(rss,space='  ');save('feed.xml','<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(rss,encoding='unicode')+'\n')
     homepage=(ROOT/'index.html').read_text()
     if '<!-- BLOG_LATEST_START -->' in homepage:
-        latest='<section class="seo-reading"><div class="container seo-reading-inner"><h2>Neue Impulse für deinen Betrieb.</h2><div class="seo-reading-links">'+''.join(f'<a href="{p["path"]}"><span>{E(p["topic"])}</span><strong>{E(p["title"])} →</strong></a>' for p in articles[:3])+'</div><p style="margin-top:24px"><a class="btn-link" href="blog.html">Alle Praxisleitfäden ansehen →</a></p></div></section>'
+        latest='<section class="seo-reading"><div class="container seo-reading-inner"><h2>Neue Impulse für deinen Betrieb.</h2><div class="seo-reading-links">'+''.join(f'<a href="{p["path"]}"><span>{E(p["topic"])}</span><strong>{E(p["title"])} →</strong></a>' for p in articles[:3])+'</div><p style="margin-top:24px"><a class="btn-link" href="blog.html">Blog &amp; Ressourcen entdecken →</a></p></div></section>'
         save('index.html',between(homepage,'BLOG_LATEST',latest))
     print(('OUT OF SYNC: ' if args.check and changes else 'Updated: ' if changes else 'PASS: publishing surfaces synchronized; ')+', '.join(changes))
     return int(args.check and bool(changes))

@@ -47,7 +47,7 @@
     /* Abschluss-Bereich des Panels: CTA + direkte Kontaktwege */
     var foot = document.createElement('li');
     foot.className = 'nav-panel-foot';
-    var ctaHref = document.getElementById('kontakt') ? '#kontakt' : 'index.html#kontakt';
+    var ctaHref = document.getElementById('kontakt') ? '#kontakt' : '/#kontakt';
     foot.innerHTML =
       '<a class="btn btn--primary" href="' + ctaHref + '">Kostenloses Gespräch vereinbaren</a>' +
       '<div class="npf-contact">' +
