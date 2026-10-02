@@ -35,10 +35,10 @@
     intro.textContent = 'Diese Position ist aktuell nicht zu besetzen. Wir nehmen für diese Rolle derzeit keine Bewerbungen entgegen.';
     role.closest('form').hidden = true;
     const notice = document.getElementById('application-availability');
-    notice.textContent = 'Sales Manager und Content & Marketing Manager sind weiterhin offen. ';
+    notice.textContent = 'Aktuell haben wir keine Stellen zu besetzen. ';
     const link = document.createElement('a');
-    link.href = '#stellen';
-    link.textContent = 'Offene Stellen ansehen →';
+    link.href = 'karriere.html#bewerben';
+    link.textContent = 'Initiativ bewerben →';
     notice.append(link);
     return;
   }
