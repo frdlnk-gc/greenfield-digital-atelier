@@ -17,6 +17,7 @@ Stand: 24.09.2026. Diese Regeln gelten für die öffentliche GitHub-Pages-Websit
 - Canonicals enthalten keine Sprungmarken. Ein Weiterleitungsziel darf mit `#kontakt` gezielt zum Formular führen; der Canonical verweist auf die vollständige Zielseite.
 - Der alte Work-Life-Balance-Pfad enthält keinen eigenständigen Artikel mehr, sondern führt zur Recruiting-Seite. Sein `noindex` gilt nur der alten Weiterleitungsdatei. Eine Wiederveröffentlichung eines echten Fachartikels wäre eine separate redaktionelle Entscheidung.
 - Private Vorschauen und Kampagnenentwürfe dürfen nicht ungeprüft in die öffentliche Sitemap übernommen werden.
+- `green-hub-personal-k7q4m2.html` (Green Hub Personal, Stand 22.10.2026): private Vorschau nur per Direktlink, `noindex, nofollow`, kein Canonical, nicht in Sitemap, Navigation oder Footer; Pfad und `assets/ghp/` in `robots.txt` gesperrt. Seiten-Assets nur unter `assets/ghp/`.
 
 ## Automatische Kontrolle
 

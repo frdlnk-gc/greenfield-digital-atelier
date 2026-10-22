@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /green-hub-personal-
+Disallow: /assets/ghp/
 
 Sitemap: https://www.greenfield-digital.de/sitemap.xml

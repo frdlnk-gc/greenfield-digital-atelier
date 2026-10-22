@@ -18,6 +18,8 @@ import xml.etree.ElementTree as ET
 from seo_check import BASE, ROOT, NS, Page
 
 CLOSED = {'videograf-cutter.html', 'projekt-marketing-manager.html'}
+# Private previews: reachable only by direct link, never in sitemap, navigation or search.
+PRIVATE = {'green-hub-personal-k7q4m2.html'}
 DOWNLOAD = 'https://static.onepage.io/media/Mitarbeiter-Benefits-Broschure-06680bf6-eba6-4f06-8c4e-234db169a480.pdf'
 
 
@@ -45,6 +47,12 @@ def validate(path, page, sitemap, header=''):
         if canonical != [url] or refresh:
             errors.append('public page canonical/redirect mismatch')
         category = 'indexable'
+    elif path in PRIVATE:
+        if not re.search(r'\bnoindex\b', ' '.join(directives), re.I) or not re.search(r'\bnofollow\b', ' '.join(directives), re.I):
+            errors.append('private preview must stay noindex, nofollow')
+        if canonical:
+            errors.append('private preview must not declare a canonical')
+        category = 'private preview'
     elif path in CLOSED or path == '404.html':
         if not excluded:
             errors.append('closed role/error page must remain noindex')
