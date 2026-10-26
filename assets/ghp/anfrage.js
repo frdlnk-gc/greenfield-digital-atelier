@@ -1,4 +1,4 @@
-/* Anfrage Green Hub Personal → Make-Webhook „GD Website: Anfrage → Slack #gd-anfragen“ (gleiches Muster wie assets/js/main.js). */
+/* Anfrage Green Hub Personal → gd-formulare.vercel.app (Bot-Schutz) → Make „GD Website: Anfrage → Slack #gd-anfragen“ (gleiches Muster wie assets/js/main.js). */
 (function () {
   var form = document.getElementById('gh-anfrage');
   if (!form) return;
@@ -26,8 +26,11 @@
     var btn = form.querySelector('[type="submit"]');
     var label = btn.innerHTML;
     btn.disabled = true; btn.textContent = 'Wird gesendet…';
-    fetch(form.getAttribute('data-webhook'), {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+    window.gdFormSchutz.token().then(function (t) {
+      payload.altcha = t;
+      return fetch(form.getAttribute('data-webhook'), {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+      });
     }).then(function (res) {
       if (!res.ok) throw new Error('Webhook ' + res.status);
       form.hidden = true;

@@ -89,7 +89,7 @@
    validateGoals();
    if(!form.reportValidity())return;
    const data={};
-   new FormData(form).forEach((v,k)=>{if(k==='website')return;const value=String(v).trim();data[k]=data[k]?`${data[k]}, ${value}`:value;});
+   new FormData(form).forEach((v,k)=>{const value=String(v).trim();data[k]=data[k]?`${data[k]}, ${value}`:value;});
    data.seite=document.title;data.url=location.href;data.zeit=new Date().toLocaleString('de-DE');
    const btn=$('[type="submit"]',form),label=btn.innerHTML;
    let error=$('.a-form-error',form);
@@ -97,6 +97,7 @@
    error.hidden=true;busy=true;btn.disabled=true;btn.textContent='Anfrage wird gesendet …';form.setAttribute('aria-busy','true');
    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
    try{
+    data.altcha=await window.gdFormSchutz.token();
     const response=await fetch(form.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:controller.signal});
     if(!response.ok)throw new Error('request_failed');
     let success=$('.form-success',form.parentElement);
