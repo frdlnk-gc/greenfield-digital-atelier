@@ -1,0 +1,87 @@
+GREENFIELD DIGITAL · PERSONALPLANUNG IM GALABAU
+Arbeitsvorlage zur nächsten Saison | Stand: 26.10.2026
+
+Betrieb / Aufgabenbereich: ____________________________________
+Plan erstellt von: __________________  Stand: __________________
+Planungszeitraum: ___________________  Nächster Abgleich: _______
+
+1. AUFTRAGSLAGE
+Pro Auftrag ausfüllen; bei Bedarf Zeilen ergänzen.
+
+Auftrag / typische Arbeiten: __________________________________
+Status: [ ] beauftragt  [ ] Entscheidung offen  [ ] Wachstumsziel
+Zeitraum / feste Termine: _____________________________________
+Benötigte Personenstunden (ggf. von–bis): ______________________
+Quelle der Schätzung / offene Annahmen: ________________________
+Nötige Fähigkeiten / Verantwortung: ____________________________
+Enthaltene Zeiten, z. B. Anfahrt und Beladen: ____________________
+
+2. STUNDEN FÜR DENSELBEN ZEITRAUM VERGLEICHEN
+Personenstunden verwenden: 3 Personen × 8 Stunden = 24 Stunden.
+Verfügbare Stunden je Person separat prüfen, bei Bedarf je Woche.
+
+A  Vertragliche Stunden der verfügbaren Belegschaft: ______ Std.
+B  Abwesenheiten, Schulung und Ausfallreserve:         ______ Std.
+C  Interne Zeit, die nicht in den Aufträgen steckt:    ______ Std.
+D  Für Aufträge verfügbare Zeit (A − B − C):           ______ Std.
+E  Bedarf aus bestätigten Aufträgen:                  ______ Std.
+F  Lücke im Grundplan (E − D):                        ______ Std.
+G  Bedarf aus konkret benannten Zusatzaufträgen:      ______ Std.
+H  Lücke im Zusatzszenario (E + G − D):                ______ Std.
+
+Positiver Wert bei F/H = rechnerisch fehlende Stunden.
+Negativer Wert = rechnerisch freie Stunden; Fähigkeiten und
+Verfügbarkeit an einzelnen Tagen müssen trotzdem passen.
+
+B: Überschneidungen ausschließen; Reserve begründen.
+C: Anfahrt/Beladen nur hier abziehen, wenn sie nicht schon in E/G
+enthalten sind. Keine Zeit zweimal berücksichtigen.
+Bekannte Abgänge/Zugänge in A nur ab dem jeweiligen Datum ansetzen.
+Annahme zur Ausfallreserve: _____________________________________
+Plan für einzelne volle Wochen nötig? __________________________
+
+3. FÄHIGKEITEN UND VERANTWORTUNG
+Für jede entscheidende Aufgabe wiederholen:
+
+Aufgabe: ______________________________________________________
+Heute selbstständig möglich durch: ____________________________
+Vertretung / deren tatsächliche Verfügbarkeit: _________________
+Mit Begleitung möglich durch: _________________________________
+Betreuung, Zeitbedarf und Entwicklungsziel: ____________________
+Ab wann wird selbstständige Ausführung gebraucht? ______________
+
+4. ENTSCHEIDUNG
+[ ] Reihenfolge / Termine / Aufgabenverteilung ändern
+[ ] Bestehenden Mitarbeiter gezielt entwickeln
+[ ] Zusätzliche oder frei werdende Stelle besetzen
+[ ] Weitere Information einholen, dann entscheiden
+
+Engpass und Beleg dafür: _______________________________________
+Tritt er in weiteren Monaten auf? ______________________________
+Abhängige Auftragsentscheidung / Auslöser: ______________________
+Gewählte Maßnahme: _____________________________________________
+Verantwortlich: __________________  Entscheidung bis: ___________
+
+5. WENN EINE STELLE GESUCHT WIRD
+Rolle / überwiegende Aufgaben: _________________________________
+Erforderliche Fähigkeiten ab Einstieg: _________________________
+Erlernbare Aufgaben und vorgesehene Unterstützung: ______________
+Verantwortung / Entscheidungsbefugnisse: ________________________
+Startort, Einsatzgebiet, Arbeitszeiten, Konditionen: ____________
+Benötigter Einsatz und gewünschter Einstieg: ___________________
+Betreuer und reservierte Einarbeitungszeit: _____________________
+Suchbudget / Prüfung der gesamten Personalkosten durch: _________
+Kontaktperson für Interessenten und Vertretung: ________________
+Nächste konkrete Handlung mit Datum: ___________________________
+
+FIKTIVES RECHENBEISPIEL
+Vier Personen × vier Wochen × 40 Stunden = 640 Stunden.
+640 − 96 Abwesenheit/Reserve − 48 interne Organisation = 496 Std.
+560 Stunden bestätigte Aufträge − 496 = 64 Stunden Lücke.
+Mit 124 Stunden Zusatzauftrag: 560 + 124 − 496 = 188 Stunden.
+Das sind frei gewählte Annahmen, keine Branchenvorgaben.
+Die Lücke allein bestimmt weder Stellenzahl noch Vertragsmodell.
+
+Eigene redaktionelle Arbeitshilfe, kein dokumentierter Kundenfall.
+Methodischer Bezug und Anleitung:
+https://www.greenfield-digital.de/blog-personalplanung-galabau.html
