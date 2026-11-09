@@ -65,7 +65,9 @@ def validate(path, page, sitemap, header=''):
         category = 'legacy redirect'
         targets = {DOWNLOAD} if path == 'download/index.html' else sitemap | {BASE + name for name in CLOSED}
         redirect = refresh[0].removeprefix('0;url=') if len(refresh) == 1 and refresh[0].startswith('0;url=') else ''
-        if not excluded or len(canonical) != 1 or canonical[0] not in targets:
+        if excluded:
+            errors.append('legacy redirect must not be noindex (Google treats it as a redirect)')
+        elif len(canonical) != 1 or canonical[0] not in targets:
             errors.append('unclassified HTML or invalid legacy destination')
         elif urldefrag(redirect)[0] != canonical[0]:
             errors.append('legacy URL must redirect immediately to its canonical')
